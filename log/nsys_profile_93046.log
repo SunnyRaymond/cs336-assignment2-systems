@@ -1360,3 +1360,60 @@ Traceback (most recent call last):
     return exponentiated_rescaled_input / torch.sum(exponentiated_rescaled_input, dim=dim, keepdim=True)
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 35.31 MiB is free. Including non-PyTorch memory, this process has 10.87 GiB memory in use. Of the allocated memory 10.67 GiB is allocated by PyTorch, and 15.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-7e41.qdstrm'
+[1/1] [0%                          ] large_ctx512_train_step.nsys-rep[1/1] [0%                          ] large_ctx512_train_step.nsys-rep[1/1] [5%                          ] large_ctx512_train_step.nsys-rep[1/1] [6%                          ] large_ctx512_train_step.nsys-rep[1/1] [7%                          ] large_ctx512_train_step.nsys-rep[1/1] [8%                          ] large_ctx512_train_step.nsys-rep[1/1] [9%                          ] large_ctx512_train_step.nsys-rep[1/1] [======================91%   ] large_ctx512_train_step.nsys-rep[1/1] [=======================95%  ] large_ctx512_train_step.nsys-rep[1/1] [========================100%] large_ctx512_train_step.nsys-rep[1/1] [========================100%] large_ctx512_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx512_train_step.nsys-rep
+WARNING: failed for size=large, ctx=512, mode=train_step (likely OOM). Continuing.
+=== Profiling large ctx=1024 mode=train_step ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 288, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 196, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 165, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 99, in annotated_scaled_dot_product_attention
+    attention_weights = softmax(attention_scores, dim=-1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/nn_utils.py", line 6, in softmax
+    exponentiated_rescaled_input = torch.exp(rescaled_input)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 320.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 237.31 MiB is free. Including non-PyTorch memory, this process has 10.67 GiB memory in use. Of the allocated memory 10.43 GiB is allocated by PyTorch, and 55.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-9c90.qdstrm'
+[1/1] [0%                          ] large_ctx1024_train_step.nsys-rep[1/1] [0%                          ] large_ctx1024_train_step.nsys-rep[1/1] [7%                          ] large_ctx1024_train_step.nsys-rep[1/1] [8%                          ] large_ctx1024_train_step.nsys-rep[1/1] [9%                          ] large_ctx1024_train_step.nsys-rep[1/1] [=======================96%  ] large_ctx1024_train_step.nsys-rep[1/1] [========================100%] large_ctx1024_train_step.nsys-rep[1/1] [========================100%] large_ctx1024_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx1024_train_step.nsys-rep
+WARNING: failed for size=large, ctx=1024, mode=train_step (likely OOM). Continuing.
+=== Done ===
+Sat Mar 14 15:14:28 CET 2026
