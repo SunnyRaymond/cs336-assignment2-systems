@@ -1,0 +1,187 @@
+=== Job info ===
+Job ID: 93052
+Host: node204
+Date: Sat Mar 14 15:27:56 CET 2026
+
+=== Forward-only profiles (for a,b,c,e) ===
+=== Profiling small ctx=128 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 47.16883106157184,
+    "stdev": 0.3623717373006989,
+    "all": [
+      47.428637742996216,
+      46.979136765003204,
+      47.04781901091337,
+      47.31362033635378,
+      47.07548674196005,
+      47.50733822584152,
+      46.62623628973961,
+      47.33662586659193,
+      47.732701525092125,
+      46.64070811122656
+    ]
+  },
+  "total_step_ms": {
+    "mean": 47.16883106157184,
+    "stdev": 0.3623717373006989,
+    "all": [
+      47.428637742996216,
+      46.979136765003204,
+      47.04781901091337,
+      47.31362033635378,
+      47.07548674196005,
+      47.50733822584152,
+      46.62623628973961,
+      47.33662586659193,
+      47.732701525092125,
+      46.64070811122656
+    ]
+  }
+}
+Generating '/tmp/nsys-report-c5b1.qdstrm'
+[1/1] [0%                          ] small_ctx128_forward.nsys-rep[1/1] [0%                          ] small_ctx128_forward.nsys-rep[1/1] [=========43%                ] small_ctx128_forward.nsys-rep[1/1] [==================77%       ] small_ctx128_forward.nsys-rep[1/1] [===================82%      ] small_ctx128_forward.nsys-rep[1/1] [====================83%     ] small_ctx128_forward.nsys-rep[1/1] [========================100%] small_ctx128_forward.nsys-rep[1/1] [========================100%] small_ctx128_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx128_forward.nsys-rep
+=== Profiling small ctx=256 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 52.456621918827295,
+    "stdev": 0.584312816106534,
+    "all": [
+      53.518474102020264,
+      53.08610573410988,
+      53.10423392802477,
+      52.17228177934885,
+      51.67857650667429,
+      52.31035128235817,
+      52.179304882884026,
+      51.95955280214548,
+      52.41038091480732,
+      52.146957255899906
+    ]
+  },
+  "total_step_ms": {
+    "mean": 52.456621918827295,
+    "stdev": 0.584312816106534,
+    "all": [
+      53.518474102020264,
+      53.08610573410988,
+      53.10423392802477,
+      52.17228177934885,
+      51.67857650667429,
+      52.31035128235817,
+      52.179304882884026,
+      51.95955280214548,
+      52.41038091480732,
+      52.146957255899906
+    ]
+  }
+}
+Generating '/tmp/nsys-report-9680.qdstrm'
+[1/1] [0%                          ] small_ctx256_forward.nsys-rep[1/1] [0%                          ] small_ctx256_forward.nsys-rep[1/1] [=========44%                ] small_ctx256_forward.nsys-rep[1/1] [==================78%       ] small_ctx256_forward.nsys-rep[1/1] [===================82%      ] small_ctx256_forward.nsys-rep[1/1] [====================83%     ] small_ctx256_forward.nsys-rep[1/1] [========================100%] small_ctx256_forward.nsys-rep[1/1] [========================100%] small_ctx256_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx256_forward.nsys-rep
+=== Profiling small ctx=512 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 512,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 105.17081683501601,
+    "stdev": 0.37068395418041067,
+    "all": [
+      104.6553086489439,
+      104.78505864739418,
+      105.09687010198832,
+      104.97347451746464,
+      104.99586537480354,
+      105.19821010529995,
+      105.80351576209068,
+      105.1913546398282,
+      105.25602288544178,
+      105.75248766690493
+    ]
+  },
+  "total_step_ms": {
+    "mean": 105.17081683501601,
+    "stdev": 0.37068395418041067,
+    "all": [
+      104.6553086489439,
+      104.78505864739418,
+      105.09687010198832,
+      104.97347451746464,
+      104.99586537480354,
+      105.19821010529995,
+      105.80351576209068,
+      105.1913546398282,
+      105.25602288544178,
+      105.75248766690493
+    ]
+  }
+}
+Generating '/tmp/nsys-report-cd89.qdstrm'
+[1/1] [0%                          ] small_ctx512_forward.nsys-rep[1/1] [0%                          ] small_ctx512_forward.nsys-rep[1/1] [=========45%                ] small_ctx512_forward.nsys-rep[1/1] [===================81%      ] small_ctx512_forward.nsys-rep[1/1] [====================83%     ] small_ctx512_forward.nsys-rep[1/1] [====================84%     ] small_ctx512_forward.nsys-rep[1/1] [========================100%] small_ctx512_forward.nsys-rep[1/1] [========================100%] small_ctx512_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_forward.nsys-rep
+=== Profiling small ctx=1024 mode=forward ===

@@ -1,0 +1,8 @@
+=== Job info ===
+Job ID: 93049
+Host: node206
+Date: Sat Mar 14 15:27:40 CET 2026
+
+=== FP32 memory profiles (parts a,b) ===
+=== Memory profiling size=2.7b ctx=128 mode=forward amp=none ===
+=== Memory profiling size=2.7b ctx=128 mode=train_step amp=none ===
