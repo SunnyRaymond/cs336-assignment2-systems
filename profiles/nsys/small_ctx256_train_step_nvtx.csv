@@ -1,0 +1,19 @@
+
+NOTICE: Existing SQLite export found: profiles/nsys/small_ctx256_train_step.sqlite
+        It is assumed file was previously exported from: profiles/nsys/small_ctx256_train_step.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [profiles/nsys/small_ctx256_train_step.sqlite] with [/cm/shared/apps/cuda12.6/toolkit/12.6/nsight-systems-2024.4.2/host-linux-x64/reports/nvtx_sum.py]... 
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Style,Range
+26.4,1833074007,10,183307400.7,183309403.0,182882731,183844943,321593.5,PushPop,:measured_step
+23.3,1617969377,15,107864625.1,100143999.0,99632144,216819215,30143086.1,PushPop,:backward
+21.4,1483523154,5,296704630.8,183141641.0,182560306,748897909,252787964.7,PushPop,:warmup_step
+17.1,1186721605,15,79114773.7,52175770.0,51960606,453255403,103505681.1,PushPop,:forward
+7.0,483565346,15,32237689.7,30037735.0,29813655,63322164,8599770.6,PushPop,:optimizer_step
+2.2,154540398,180,858557.8,595882.0,579910,39471180,2904717.7,PushPop,:scaled dot product attention
+1.0,69165731,180,384254.1,235153.5,228637,21678158,1610101.2,PushPop,:computing attention scores
+0.8,53615445,180,297863.6,185375.5,181209,17348905,1279098.9,PushPop,:computing softmax
+0.4,26753121,180,148628.5,144745.0,141565,381428,18280.9,PushPop,:final matmul
+0.2,16278397,15,1085226.5,95507.0,88452,14704708,3768243.1,PushPop,:loss
+0.2,11306037,15,753735.8,730364.0,694997,897839,56543.4,PushPop,:step_start
+

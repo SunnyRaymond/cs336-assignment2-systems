@@ -185,3 +185,819 @@ Generating '/tmp/nsys-report-cd89.qdstrm'
 Generated:
     /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_forward.nsys-rep
 === Profiling small ctx=1024 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 1024,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 262.48704912140965,
+    "stdev": 0.449446636425382,
+    "all": [
+      262.32381351292133,
+      262.1893649920821,
+      262.14402355253696,
+      263.5491881519556,
+      261.9426120072603,
+      262.4601311981678,
+      262.29415740817785,
+      262.5315207988024,
+      262.6338666304946,
+      262.8018129616976
+    ]
+  },
+  "total_step_ms": {
+    "mean": 262.48704912140965,
+    "stdev": 0.449446636425382,
+    "all": [
+      262.32381351292133,
+      262.1893649920821,
+      262.14402355253696,
+      263.5491881519556,
+      261.9426120072603,
+      262.4601311981678,
+      262.29415740817785,
+      262.5315207988024,
+      262.6338666304946,
+      262.8018129616976
+    ]
+  }
+}
+Generating '/tmp/nsys-report-6e6e.qdstrm'
+[1/1] [0%                          ] small_ctx1024_forward.nsys-rep[1/1] [0%                          ] small_ctx1024_forward.nsys-rep[1/1] [=========45%                ] small_ctx1024_forward.nsys-rep[1/1] [===================79%      ] small_ctx1024_forward.nsys-rep[1/1] [====================84%     ] small_ctx1024_forward.nsys-rep[1/1] [====================85%     ] small_ctx1024_forward.nsys-rep[1/1] [========================100%] small_ctx1024_forward.nsys-rep[1/1] [========================100%] small_ctx1024_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx1024_forward.nsys-rep
+=== Profiling medium ctx=128 mode=forward ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 95.20188579335809,
+    "stdev": 1.100590154678511,
+    "all": [
+      97.7691626176238,
+      94.5527320727706,
+      95.51867097616196,
+      94.76249758154154,
+      95.17033584415913,
+      94.6560325101018,
+      94.33456882834435,
+      94.6797439828515,
+      94.2251393571496,
+      96.3499741628766
+    ]
+  },
+  "total_step_ms": {
+    "mean": 95.20188579335809,
+    "stdev": 1.100590154678511,
+    "all": [
+      97.7691626176238,
+      94.5527320727706,
+      95.51867097616196,
+      94.76249758154154,
+      95.17033584415913,
+      94.6560325101018,
+      94.33456882834435,
+      94.6797439828515,
+      94.2251393571496,
+      96.3499741628766
+    ]
+  }
+}
+Generating '/tmp/nsys-report-2da8.qdstrm'
+[1/1] [0%                          ] medium_ctx128_forward.nsys-rep[1/1] [0%                          ] medium_ctx128_forward.nsys-rep[1/1] [====27%                     ] medium_ctx128_forward.nsys-rep[1/1] [==========47%               ] medium_ctx128_forward.nsys-rep[1/1] [================68%         ] medium_ctx128_forward.nsys-rep[1/1] [===================79%      ] medium_ctx128_forward.nsys-rep[1/1] [===================80%      ] medium_ctx128_forward.nsys-rep[1/1] [========================100%] medium_ctx128_forward.nsys-rep[1/1] [========================100%] medium_ctx128_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx128_forward.nsys-rep
+=== Profiling medium ctx=256 mode=forward ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 144.60274707525969,
+    "stdev": 0.2865490489772093,
+    "all": [
+      144.32035107165575,
+      144.31391842663288,
+      145.07440757006407,
+      144.67184618115425,
+      144.39839776605368,
+      144.63152084499598,
+      144.3309634923935,
+      144.65231448411942,
+      144.55422200262547,
+      145.07952891290188
+    ]
+  },
+  "total_step_ms": {
+    "mean": 144.60274707525969,
+    "stdev": 0.2865490489772093,
+    "all": [
+      144.32035107165575,
+      144.31391842663288,
+      145.07440757006407,
+      144.67184618115425,
+      144.39839776605368,
+      144.63152084499598,
+      144.3309634923935,
+      144.65231448411942,
+      144.55422200262547,
+      145.07952891290188
+    ]
+  }
+}
+Generating '/tmp/nsys-report-7b0f.qdstrm'
+[1/1] [0%                          ] medium_ctx256_forward.nsys-rep[1/1] [0%                          ] medium_ctx256_forward.nsys-rep[1/1] [====26%                     ] medium_ctx256_forward.nsys-rep[1/1] [==========47%               ] medium_ctx256_forward.nsys-rep[1/1] [================68%         ] medium_ctx256_forward.nsys-rep[1/1] [===================79%      ] medium_ctx256_forward.nsys-rep[1/1] [===================80%      ] medium_ctx256_forward.nsys-rep[1/1] [========================100%] medium_ctx256_forward.nsys-rep[1/1] [========================100%] medium_ctx256_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx256_forward.nsys-rep
+=== Profiling medium ctx=512 mode=forward ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 512,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 315.2314415201545,
+    "stdev": 0.6623534168595756,
+    "all": [
+      315.25155529379845,
+      315.6031109392643,
+      315.6249327585101,
+      315.719579346478,
+      314.49695862829685,
+      314.5803455263376,
+      314.27128054201603,
+      316.408040933311,
+      314.9131955578923,
+      315.4454156756401
+    ]
+  },
+  "total_step_ms": {
+    "mean": 315.2314415201545,
+    "stdev": 0.6623534168595756,
+    "all": [
+      315.25155529379845,
+      315.6031109392643,
+      315.6249327585101,
+      315.719579346478,
+      314.49695862829685,
+      314.5803455263376,
+      314.27128054201603,
+      316.408040933311,
+      314.9131955578923,
+      315.4454156756401
+    ]
+  }
+}
+Generating '/tmp/nsys-report-b126.qdstrm'
+[1/1] [0%                          ] medium_ctx512_forward.nsys-rep[1/1] [0%                          ] medium_ctx512_forward.nsys-rep[1/1] [====27%                     ] medium_ctx512_forward.nsys-rep[1/1] [==========49%               ] medium_ctx512_forward.nsys-rep[1/1] [================70%         ] medium_ctx512_forward.nsys-rep[1/1] [===================80%      ] medium_ctx512_forward.nsys-rep[1/1] [===================81%      ] medium_ctx512_forward.nsys-rep[1/1] [========================100%] medium_ctx512_forward.nsys-rep[1/1] [========================100%] medium_ctx512_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx512_forward.nsys-rep
+=== Profiling large ctx=128 mode=forward ===
+{
+  "config": {
+    "size": "large",
+    "spec": {
+      "d_model": 1280,
+      "d_ff": 5120,
+      "num_layers": 36,
+      "num_heads": 20
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 173.70491800829768,
+    "stdev": 0.1768164301975786,
+    "all": [
+      173.55617228895426,
+      173.4736580401659,
+      173.4904870390892,
+      173.52700419723988,
+      173.89558348804712,
+      173.7810354679823,
+      173.80710411816835,
+      173.9315763115883,
+      173.85869100689888,
+      173.72786812484264
+    ]
+  },
+  "total_step_ms": {
+    "mean": 173.70491800829768,
+    "stdev": 0.1768164301975786,
+    "all": [
+      173.55617228895426,
+      173.4736580401659,
+      173.4904870390892,
+      173.52700419723988,
+      173.89558348804712,
+      173.7810354679823,
+      173.80710411816835,
+      173.9315763115883,
+      173.85869100689888,
+      173.72786812484264
+    ]
+  }
+}
+Generating '/tmp/nsys-report-e4c7.qdstrm'
+[1/1] [0%                          ] large_ctx128_forward.nsys-rep[1/1] [0%                          ] large_ctx128_forward.nsys-rep[1/1] [7%                          ] large_ctx128_forward.nsys-rep[1/1] [==19%                       ] large_ctx128_forward.nsys-rep[1/1] [======34%                   ] large_ctx128_forward.nsys-rep[1/1] [==========48%               ] large_ctx128_forward.nsys-rep[1/1] [==============63%           ] large_ctx128_forward.nsys-rep[1/1] [==================78%       ] large_ctx128_forward.nsys-rep[1/1] [===================79%      ] large_ctx128_forward.nsys-rep[1/1] [========================100%] large_ctx128_forward.nsys-rep[1/1] [========================100%] large_ctx128_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx128_forward.nsys-rep
+=== Profiling large ctx=256 mode=forward ===
+{
+  "config": {
+    "size": "large",
+    "spec": {
+      "d_model": 1280,
+      "d_ff": 5120,
+      "num_layers": 36,
+      "num_heads": 20
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 323.73354360461235,
+    "stdev": 0.4948062885477882,
+    "all": [
+      324.16014187037945,
+      323.19523114711046,
+      323.7478146329522,
+      324.57309775054455,
+      323.75732250511646,
+      323.47937021404505,
+      322.85815849900246,
+      323.5605200752616,
+      324.1049749776721,
+      323.8988043740392
+    ]
+  },
+  "total_step_ms": {
+    "mean": 323.73354360461235,
+    "stdev": 0.4948062885477882,
+    "all": [
+      324.16014187037945,
+      323.19523114711046,
+      323.7478146329522,
+      324.57309775054455,
+      323.75732250511646,
+      323.47937021404505,
+      322.85815849900246,
+      323.5605200752616,
+      324.1049749776721,
+      323.8988043740392
+    ]
+  }
+}
+Generating '/tmp/nsys-report-aec3.qdstrm'
+[1/1] [0%                          ] large_ctx256_forward.nsys-rep[1/1] [0%                          ] large_ctx256_forward.nsys-rep[1/1] [==20%                       ] large_ctx256_forward.nsys-rep[1/1] [=======36%                  ] large_ctx256_forward.nsys-rep[1/1] [===========51%              ] large_ctx256_forward.nsys-rep[1/1] [===============66%          ] large_ctx256_forward.nsys-rep[1/1] [==================78%       ] large_ctx256_forward.nsys-rep[1/1] [===================79%      ] large_ctx256_forward.nsys-rep[1/1] [========================100%] large_ctx256_forward.nsys-rep[1/1] [========================100%] large_ctx256_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx256_forward.nsys-rep
+=== Full train-step profiles (for d) ===
+=== Profiling small ctx=128 mode=train_step ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 48.16847527399659,
+    "stdev": 0.3747854581857024,
+    "all": [
+      47.96312842518091,
+      48.215909861028194,
+      48.40636346489191,
+      48.03631082177162,
+      49.14141446352005,
+      48.09528402984142,
+      47.877250239253044,
+      48.044865019619465,
+      47.949161380529404,
+      47.95506503432989
+    ]
+  },
+  "total_step_ms": {
+    "mean": 138.20837242528796,
+    "stdev": 1.2433804199372203,
+    "all": [
+      137.579882517457,
+      137.66052294522524,
+      137.79838103801012,
+      141.0756167024374,
+      139.84171487390995,
+      137.85434886813164,
+      137.27661967277527,
+      137.56921142339706,
+      137.34599947929382,
+      138.0814267322421
+    ]
+  },
+  "backward_ms": {
+    "mean": 59.941687528043985,
+    "stdev": 1.100238988682073,
+    "all": [
+      59.46009512990713,
+      59.385450556874275,
+      59.29243564605713,
+      62.903537414968014,
+      60.374824330210686,
+      59.766875579953194,
+      59.29887108504772,
+      59.55738853663206,
+      59.333560056984425,
+      60.04383694380522
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 30.098209623247385,
+    "stdev": 0.09885028144549768,
+    "all": [
+      30.156658962368965,
+      30.05916252732277,
+      30.09958192706108,
+      30.135768465697765,
+      30.325476080179214,
+      29.99218925833702,
+      30.100498348474503,
+      29.96695786714554,
+      30.063278041779995,
+      30.082524754107
+    ]
+  }
+}
+Generating '/tmp/nsys-report-3788.qdstrm'
+[1/1] [0%                          ] small_ctx128_train_step.nsys-rep[1/1] [0%                          ] small_ctx128_train_step.nsys-rep[1/1] [==20%                       ] small_ctx128_train_step.nsys-rep[1/1] [=======37%                  ] small_ctx128_train_step.nsys-rep[1/1] [===========53%              ] small_ctx128_train_step.nsys-rep[1/1] [================69%         ] small_ctx128_train_step.nsys-rep[1/1] [==================78%       ] small_ctx128_train_step.nsys-rep[1/1] [===================79%      ] small_ctx128_train_step.nsys-rep[1/1] [========================100%] small_ctx128_train_step.nsys-rep[1/1] [========================100%] small_ctx128_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx128_train_step.nsys-rep
+=== Profiling small ctx=256 mode=train_step ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 52.18489170074463,
+    "stdev": 0.13516730498732848,
+    "all": [
+      52.07260139286518,
+      52.11983062326908,
+      51.96751840412617,
+      52.113670855760574,
+      52.25099716335535,
+      52.16209590435028,
+      52.21916735172272,
+      52.320417016744614,
+      52.450722083449364,
+      52.17189621180296
+    ]
+  },
+  "total_step_ms": {
+    "mean": 182.411415502429,
+    "stdev": 0.3141049493047212,
+    "all": [
+      182.06338584423065,
+      182.0820551365614,
+      182.59896151721478,
+      182.73048289120197,
+      182.47526325285435,
+      182.3059692978859,
+      182.3508758097887,
+      182.9778291285038,
+      182.5279351323843,
+      182.00139701366425
+    ]
+  },
+  "backward_ms": {
+    "mean": 100.22921273484826,
+    "stdev": 0.26075758252684267,
+    "all": [
+      99.97742157429457,
+      99.97197240591049,
+      100.46541877090931,
+      100.58274492621422,
+      100.17491225153208,
+      100.33410601317883,
+      100.18086712807417,
+      100.6047073751688,
+      100.14003980904818,
+      99.85993709415197
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 29.99731106683612,
+    "stdev": 0.09286676182982946,
+    "all": [
+      30.013362877070904,
+      29.99025210738182,
+      30.1660243421793,
+      30.03406710922718,
+      30.04935383796692,
+      29.80976738035679,
+      29.950841329991817,
+      30.052704736590385,
+      29.93717323988676,
+      29.969563707709312
+    ]
+  }
+}
+Generating '/tmp/nsys-report-ddf4.qdstrm'
+[1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [==20%                       ] small_ctx256_train_step.nsys-rep[1/1] [=======36%                  ] small_ctx256_train_step.nsys-rep[1/1] [===========52%              ] small_ctx256_train_step.nsys-rep[1/1] [================68%         ] small_ctx256_train_step.nsys-rep[1/1] [==================78%       ] small_ctx256_train_step.nsys-rep[1/1] [===================79%      ] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx256_train_step.nsys-rep
+=== Profiling small ctx=512 mode=train_step ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 512,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 105.39307398721576,
+    "stdev": 0.19934324978404303,
+    "all": [
+      105.28785176575184,
+      105.46193551272154,
+      105.17921578139067,
+      105.15736509114504,
+      105.42065929621458,
+      105.77367059886456,
+      105.231081135571,
+      105.29193188995123,
+      105.576666072011,
+      105.55036272853613
+    ]
+  },
+  "total_step_ms": {
+    "mean": 352.8065411373973,
+    "stdev": 0.7301985124879689,
+    "all": [
+      352.2978974506259,
+      351.8365602940321,
+      352.61344350874424,
+      352.33897529542446,
+      352.70853247493505,
+      353.78804709762335,
+      352.21725702285767,
+      354.1880026459694,
+      352.978752925992,
+      353.0979426577687
+    ]
+  },
+  "backward_ms": {
+    "mean": 217.2577377408743,
+    "stdev": 0.5225157884211161,
+    "all": [
+      216.98150597512722,
+      216.44158195704222,
+      217.36528724431992,
+      217.01211482286453,
+      216.88786149024963,
+      218.05311925709248,
+      216.92326199263334,
+      218.09470187872648,
+      217.32143126428127,
+      217.4965115264058
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 30.15572940930724,
+    "stdev": 0.26098885831696317,
+    "all": [
+      30.028539709746838,
+      29.93304282426834,
+      30.068940483033657,
+      30.16949538141489,
+      30.40001168847084,
+      29.961257241666317,
+      30.06291389465332,
+      30.80136887729168,
+      30.080655589699745,
+      30.051068402826786
+    ]
+  }
+}
+Generating '/tmp/nsys-report-19cb.qdstrm'
+[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [==21%                       ] small_ctx512_train_step.nsys-rep[1/1] [=======37%                  ] small_ctx512_train_step.nsys-rep[1/1] [============54%             ] small_ctx512_train_step.nsys-rep[1/1] [================71%         ] small_ctx512_train_step.nsys-rep[1/1] [===================79%      ] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_train_step.nsys-rep
+=== Profiling medium ctx=128 mode=train_step ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 96.04327362030745,
+    "stdev": 2.8396526456372744,
+    "all": [
+      94.73365359008312,
+      95.64802329987288,
+      95.54800763726234,
+      94.37556937336922,
+      98.06856978684664,
+      94.46104057133198,
+      94.78211961686611,
+      94.18867062777281,
+      95.15120089054108,
+      103.47588080912828
+    ]
+  },
+  "total_step_ms": {
+    "mean": 348.5692315734923,
+    "stdev": 3.1456115015410555,
+    "all": [
+      346.3077135384083,
+      348.026885651052,
+      347.7877462282777,
+      347.2964642569423,
+      350.92171654105186,
+      347.9251628741622,
+      347.0920929685235,
+      346.36212792247534,
+      347.23957534879446,
+      356.7328304052353
+    ]
+  },
+  "backward_ms": {
+    "mean": 154.9344638362527,
+    "stdev": 0.408807804236468,
+    "all": [
+      154.12854962050915,
+      154.80122156441212,
+      154.74612452089787,
+      155.09277023375034,
+      155.1241697743535,
+      155.57080041617155,
+      154.83877807855606,
+      154.89996038377285,
+      154.6918461099267,
+      155.45041766017675
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 97.59149411693215,
+    "stdev": 0.21000692677896804,
+    "all": [
+      97.44551032781601,
+      97.577640786767,
+      97.49361407011747,
+      97.82812464982271,
+      97.72897697985172,
+      97.89332188665867,
+      97.47119527310133,
+      97.27349691092968,
+      97.39652834832668,
+      97.80653193593025
+    ]
+  }
+}
+Generating '/tmp/nsys-report-d8b7.qdstrm'
+[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [11%                         ] medium_ctx128_train_step.nsys-rep[1/1] [==20%                       ] medium_ctx128_train_step.nsys-rep[1/1] [=====29%                    ] medium_ctx128_train_step.nsys-rep[1/1] [=======38%                  ] medium_ctx128_train_step.nsys-rep[1/1] [=========46%                ] medium_ctx128_train_step.nsys-rep[1/1] [============55%             ] medium_ctx128_train_step.nsys-rep[1/1] [==============64%           ] medium_ctx128_train_step.nsys-rep[1/1] [=================73%        ] medium_ctx128_train_step.nsys-rep[1/1] [==================77%       ] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx128_train_step.nsys-rep
+=== Profiling medium ctx=256 mode=train_step ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 144.71119288355112,
+    "stdev": 0.22228045622198073,
+    "all": [
+      144.6379916742444,
+      144.28079593926668,
+      144.9958272278309,
+      144.63339000940323,
+      144.48111411184072,
+      144.6596821770072,
+      144.95513774454594,
+      144.9213484302163,
+      144.769879989326,
+      144.77676153182983
+    ]
+  },
+  "total_step_ms": {
+    "mean": 540.6876398250461,
+    "stdev": 0.7909010254227027,
+    "all": [
+      539.4370649009943,
+      539.4872212782502,
+      540.6848741695285,
+      540.6709648668766,
+      541.0036742687225,
+      540.2917200699449,
+      540.8745054155588,
+      541.0353979095817,
+      541.3950774818659,
+      541.9958978891373
+    ]
+  },
+  "backward_ms": {
+    "mean": 298.5347484238446,
+    "stdev": 0.6689083708372204,
+    "all": [
+      297.379351221025,
+      297.9126814752817,
+      298.5795410349965,
+      298.53658843785524,
+      298.89574833214283,
+      297.9287402704358,
+      298.40556532144547,
+      298.8368449732661,
+      299.2461631074548,
+      299.6262600645423
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 97.44169851765037,
+    "stdev": 0.1819585778635045,
+    "all": [
+      97.4197220057249,
+      97.29374386370182,
+      97.10950590670109,
+      97.50098641961813,
+      97.62681182473898,
+      97.70329762250185,
+      97.51380234956741,
+      97.27720450609922,
+      97.3790343850851,
+      97.59287629276514
+    ]
+  }
+}
