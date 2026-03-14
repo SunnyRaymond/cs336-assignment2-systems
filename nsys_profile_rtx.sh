@@ -1,7 +1,8 @@
 #!/bin/bash
-#SBATCH --job-name=nsys_profile
-#SBATCH --partition=fatq
-#SBATCH --gres=gpu:4
+#SBATCH --job-name=nsys_profile_rtx
+#SBATCH --partition=defq
+#SBATCH --gres=gpu:2
+#SBATCH --constraint=TitanRTX
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=120G
 #SBATCH --time=7-00:00:00
@@ -27,6 +28,10 @@ source /var/scratch/dpp2567/miniconda3/etc/profile.d/conda.sh
 conda activate base
 
 mkdir -p profiles/nsys
+
+# For 11GB VRAM GPUs, XL and 2.7B are omitted.
+SIZES=(small medium large)
+CONTEXTS=(128 256 512 1024)
 
 run_profile() {
   local size="$1"
@@ -64,25 +69,18 @@ run_profile() {
 }
 
 echo "=== Forward-only profiles (for a,b,c,e) ==="
-# Based on log/nsys_profile_93046.log OOM results, keep only non-OOM configs:
-# forward: small(128,256,512,1024), medium(128,256,512), large(128,256)
-run_profile "small" "128" "forward"
-run_profile "small" "256" "forward"
-run_profile "small" "512" "forward"
-run_profile "small" "1024" "forward"
-run_profile "medium" "128" "forward"
-run_profile "medium" "256" "forward"
-run_profile "medium" "512" "forward"
-run_profile "large" "128" "forward"
-run_profile "large" "256" "forward"
+for s in "${SIZES[@]}"; do
+  for c in "${CONTEXTS[@]}"; do
+    run_profile "${s}" "${c}" "forward"
+  done
+done
 
 echo "=== Full train-step profiles (for d) ==="
-# train_step: small(128,256,512), medium(128,256)
-run_profile "small" "128" "train_step"
-run_profile "small" "256" "train_step"
-run_profile "small" "512" "train_step"
-run_profile "medium" "128" "train_step"
-run_profile "medium" "256" "train_step"
+for s in "${SIZES[@]}"; do
+  for c in "${CONTEXTS[@]}"; do
+    run_profile "${s}" "${c}" "train_step"
+  done
+done
 
 echo "=== Done ==="
 date

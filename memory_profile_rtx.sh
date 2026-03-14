@@ -1,7 +1,8 @@
 #!/bin/bash
-#SBATCH --job-name=memory_profile
-#SBATCH --partition=fatq
-#SBATCH --gres=gpu:1
+#SBATCH --job-name=memory_profile_rtx
+#SBATCH --partition=defq
+#SBATCH --gres=gpu:2
+#SBATCH --constraint=TitanRTX
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
 #SBATCH --time=2-00:00:00
@@ -29,10 +30,10 @@ conda activate base
 mkdir -p profiles/memory
 
 # Assignment 1.1.6 target setup:
-# - model: large
+# - model: 2.7B
 # - context lengths: 128, 256, 512
 # - modes: forward and full training step
-SIZE="large"
+SIZE="2.7b"
 CONTEXTS=(128 256 512)
 MODES=(forward train_step)
 
