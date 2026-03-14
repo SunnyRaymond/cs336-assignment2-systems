@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import pathlib
 import statistics
+from contextlib import nullcontext
 from timeit import default_timer
 
 import torch
@@ -19,8 +21,8 @@ MODEL_SPECS: dict[str, dict[str, int]] = {
     "small": {"d_model": 768, "d_ff": 3072, "num_layers": 12, "num_heads": 12},
     "medium": {"d_model": 1024, "d_ff": 4096, "num_layers": 24, "num_heads": 16},
     "large": {"d_model": 1280, "d_ff": 5120, "num_layers": 36, "num_heads": 20},
-    # "xl": {"d_model": 1600, "d_ff": 6400, "num_layers": 48, "num_heads": 25},
-    # "2.7b": {"d_model": 2560, "d_ff": 10240, "num_layers": 32, "num_heads": 32},
+    "xl": {"d_model": 1600, "d_ff": 6400, "num_layers": 48, "num_heads": 25},
+    "2.7b": {"d_model": 2560, "d_ff": 10240, "num_layers": 32, "num_heads": 32},
 }
 
 
@@ -65,6 +67,23 @@ def parse_args() -> argparse.Namespace:
         default="float32",
         help="Model parameter dtype.",
     )
+    parser.add_argument(
+        "--amp",
+        choices=["none", "float16", "bfloat16"],
+        default="none",
+        help="Autocast dtype for mixed precision compute.",
+    )
+    parser.add_argument(
+        "--memory-profile",
+        action="store_true",
+        help="Record a PyTorch CUDA memory snapshot over measured steps.",
+    )
+    parser.add_argument(
+        "--memory-snapshot-prefix",
+        default="profiles/memory/memory_snapshot",
+        help="Prefix for torch.cuda.memory snapshot output file.",
+    )
+    parser.add_argument("--memory-max-entries", type=int, default=1_000_000)
     return parser.parse_args()
 
 
@@ -91,6 +110,9 @@ def main() -> None:
     spec = MODEL_SPECS[args.size]
     device = args.device
     dtype = getattr(torch, args.dtype)
+    amp_dtype = None if args.amp == "none" else getattr(torch, args.amp)
+    if amp_dtype is not None and not device.startswith("cuda"):
+        raise ValueError("--amp requires a CUDA device.")
 
     model = BasicsTransformerLM(
         vocab_size=args.vocab_size,
@@ -135,7 +157,12 @@ def main() -> None:
 
             with nvtx.range("forward"):
                 forward_start = default_timer()
-                logits = model(x)
+                if amp_dtype is None:
+                    autocast_ctx = nullcontext()
+                else:
+                    autocast_ctx = torch.autocast(device_type="cuda", dtype=amp_dtype)
+                with autocast_ctx:
+                    logits = model(x)
                 synchronize_if_needed(device)
                 forward_time = default_timer() - forward_start
 
@@ -168,6 +195,15 @@ def main() -> None:
     for _ in range(args.warmup_steps):
         run_step(profiled=False)
 
+    memory_snapshot_path = None
+    peak_allocated_mb = None
+    peak_reserved_mb = None
+    if args.memory_profile:
+        if not device.startswith("cuda"):
+            raise ValueError("--memory-profile requires CUDA.")
+        torch.cuda.reset_peak_memory_stats()
+        torch.cuda.memory._record_memory_history(max_entries=args.memory_max_entries)
+
     forward_times: list[float] = []
     backward_times: list[float] = []
     optimizer_times: list[float] = []
@@ -187,6 +223,17 @@ def main() -> None:
             total += opt_t
         total_times.append(total)
 
+    if args.memory_profile:
+        snapshot_prefix_path = pathlib.Path(args.memory_snapshot_prefix)
+        snapshot_prefix_path.parent.mkdir(parents=True, exist_ok=True)
+        memory_snapshot_path = (
+            f"{args.memory_snapshot_prefix}_{args.size}_ctx{args.context_length}_{args.mode}_amp-{args.amp}.pickle"
+        )
+        torch.cuda.memory._dump_snapshot(memory_snapshot_path)
+        torch.cuda.memory._record_memory_history(enabled=None)
+        peak_allocated_mb = torch.cuda.max_memory_allocated() / (1024 ** 2)
+        peak_reserved_mb = torch.cuda.max_memory_reserved() / (1024 ** 2)
+
     result = {
         "config": {
             "size": args.size,
@@ -200,7 +247,9 @@ def main() -> None:
             "measure_steps": args.measure_steps,
             "device": device,
             "dtype": args.dtype,
+            "amp": args.amp,
             "annotate_attention": args.annotate_attention,
+            "memory_profile": args.memory_profile,
         },
         "forward_ms": {
             "mean": 1000.0 * statistics.mean(forward_times),
@@ -224,6 +273,12 @@ def main() -> None:
             "mean": 1000.0 * statistics.mean(optimizer_times),
             "stdev": 1000.0 * statistics.stdev(optimizer_times) if len(optimizer_times) > 1 else 0.0,
             "all": [1000.0 * t for t in optimizer_times],
+        }
+    if args.memory_profile:
+        result["memory"] = {
+            "snapshot_path": memory_snapshot_path,
+            "peak_allocated_mb": peak_allocated_mb,
+            "peak_reserved_mb": peak_reserved_mb,
         }
 
     print(json.dumps(result, indent=2))
