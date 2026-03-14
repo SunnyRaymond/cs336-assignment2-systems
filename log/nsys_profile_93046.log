@@ -1,0 +1,1362 @@
+=== Job info ===
+Job ID: 93046
+Host: node203
+Date: Sat Mar 14 15:06:44 CET 2026
+
+=== Forward-only profiles (for a,b,c,e) ===
+=== Profiling small ctx=128 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 48.57499748468399,
+    "stdev": 0.4169307980205181,
+    "all": [
+      48.445750027894974,
+      48.55890944600105,
+      48.34691062569618,
+      49.333810806274414,
+      48.562146723270416,
+      48.91052469611168,
+      47.90719598531723,
+      48.264216631650925,
+      48.372749239206314,
+      49.04776066541672
+    ]
+  },
+  "total_step_ms": {
+    "mean": 48.57499748468399,
+    "stdev": 0.4169307980205181,
+    "all": [
+      48.445750027894974,
+      48.55890944600105,
+      48.34691062569618,
+      49.333810806274414,
+      48.562146723270416,
+      48.91052469611168,
+      47.90719598531723,
+      48.264216631650925,
+      48.372749239206314,
+      49.04776066541672
+    ]
+  }
+}
+Generating '/tmp/nsys-report-9e35.qdstrm'
+[1/1] [0%                          ] small_ctx128_forward.nsys-rep[1/1] [0%                          ] small_ctx128_forward.nsys-rep[1/1] [=========44%                ] small_ctx128_forward.nsys-rep[1/1] [===================79%      ] small_ctx128_forward.nsys-rep[1/1] [===================82%      ] small_ctx128_forward.nsys-rep[1/1] [====================83%     ] small_ctx128_forward.nsys-rep[1/1] [========================100%] small_ctx128_forward.nsys-rep[1/1] [========================100%] small_ctx128_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx128_forward.nsys-rep
+=== Profiling small ctx=256 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 52.50059589743614,
+    "stdev": 1.0488913021054567,
+    "all": [
+      54.971177130937576,
+      53.35080251097679,
+      53.25600504875183,
+      52.19487100839615,
+      51.7481192946434,
+      51.92261189222336,
+      51.771875470876694,
+      51.896847784519196,
+      51.97568237781525,
+      51.917966455221176
+    ]
+  },
+  "total_step_ms": {
+    "mean": 52.50059589743614,
+    "stdev": 1.0488913021054567,
+    "all": [
+      54.971177130937576,
+      53.35080251097679,
+      53.25600504875183,
+      52.19487100839615,
+      51.7481192946434,
+      51.92261189222336,
+      51.771875470876694,
+      51.896847784519196,
+      51.97568237781525,
+      51.917966455221176
+    ]
+  }
+}
+Generating '/tmp/nsys-report-6d89.qdstrm'
+[1/1] [0%                          ] small_ctx256_forward.nsys-rep[1/1] [0%                          ] small_ctx256_forward.nsys-rep[1/1] [=========44%                ] small_ctx256_forward.nsys-rep[1/1] [==================78%       ] small_ctx256_forward.nsys-rep[1/1] [===================82%      ] small_ctx256_forward.nsys-rep[1/1] [====================83%     ] small_ctx256_forward.nsys-rep[1/1] [========================100%] small_ctx256_forward.nsys-rep[1/1] [========================100%] small_ctx256_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx256_forward.nsys-rep
+=== Profiling small ctx=512 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 512,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 104.5145783573389,
+    "stdev": 0.17643321976861712,
+    "all": [
+      104.59758713841438,
+      104.47975620627403,
+      104.42905873060226,
+      104.26122322678566,
+      104.25359010696411,
+      104.571383446455,
+      104.69716042280197,
+      104.70690578222275,
+      104.41379621624947,
+      104.73532229661942
+    ]
+  },
+  "total_step_ms": {
+    "mean": 104.5145783573389,
+    "stdev": 0.17643321976861712,
+    "all": [
+      104.59758713841438,
+      104.47975620627403,
+      104.42905873060226,
+      104.26122322678566,
+      104.25359010696411,
+      104.571383446455,
+      104.69716042280197,
+      104.70690578222275,
+      104.41379621624947,
+      104.73532229661942
+    ]
+  }
+}
+Generating '/tmp/nsys-report-a886.qdstrm'
+[1/1] [0%                          ] small_ctx512_forward.nsys-rep[1/1] [0%                          ] small_ctx512_forward.nsys-rep[1/1] [=========45%                ] small_ctx512_forward.nsys-rep[1/1] [===================81%      ] small_ctx512_forward.nsys-rep[1/1] [====================83%     ] small_ctx512_forward.nsys-rep[1/1] [====================84%     ] small_ctx512_forward.nsys-rep[1/1] [========================100%] small_ctx512_forward.nsys-rep[1/1] [========================100%] small_ctx512_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_forward.nsys-rep
+=== Profiling small ctx=1024 mode=forward ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 1024,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 260.07895171642303,
+    "stdev": 0.6818849514302648,
+    "all": [
+      259.8337382078171,
+      260.94625517725945,
+      259.52520221471786,
+      260.3711932897568,
+      259.56038758158684,
+      260.79320162534714,
+      259.18277725577354,
+      259.6340589225292,
+      259.8034292459488,
+      261.13927364349365
+    ]
+  },
+  "total_step_ms": {
+    "mean": 260.07895171642303,
+    "stdev": 0.6818849514302648,
+    "all": [
+      259.8337382078171,
+      260.94625517725945,
+      259.52520221471786,
+      260.3711932897568,
+      259.56038758158684,
+      260.79320162534714,
+      259.18277725577354,
+      259.6340589225292,
+      259.8034292459488,
+      261.13927364349365
+    ]
+  }
+}
+Generating '/tmp/nsys-report-4421.qdstrm'
+[1/1] [0%                          ] small_ctx1024_forward.nsys-rep[1/1] [0%                          ] small_ctx1024_forward.nsys-rep[1/1] [=========44%                ] small_ctx1024_forward.nsys-rep[1/1] [===================79%      ] small_ctx1024_forward.nsys-rep[1/1] [====================83%     ] small_ctx1024_forward.nsys-rep[1/1] [====================84%     ] small_ctx1024_forward.nsys-rep[1/1] [========================100%] small_ctx1024_forward.nsys-rep[1/1] [========================100%] small_ctx1024_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx1024_forward.nsys-rep
+=== Profiling medium ctx=128 mode=forward ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 93.69478859007359,
+    "stdev": 1.1020411434052975,
+    "all": [
+      96.63889557123184,
+      94.00854259729385,
+      93.24513003230095,
+      93.94818171858788,
+      93.08486431837082,
+      93.50728616118431,
+      92.90452301502228,
+      92.90392696857452,
+      93.29234063625336,
+      93.41419488191605
+    ]
+  },
+  "total_step_ms": {
+    "mean": 93.69478859007359,
+    "stdev": 1.1020411434052975,
+    "all": [
+      96.63889557123184,
+      94.00854259729385,
+      93.24513003230095,
+      93.94818171858788,
+      93.08486431837082,
+      93.50728616118431,
+      92.90452301502228,
+      92.90392696857452,
+      93.29234063625336,
+      93.41419488191605
+    ]
+  }
+}
+Generating '/tmp/nsys-report-d5b0.qdstrm'
+[1/1] [0%                          ] medium_ctx128_forward.nsys-rep[1/1] [0%                          ] medium_ctx128_forward.nsys-rep[1/1] [====27%                     ] medium_ctx128_forward.nsys-rep[1/1] [==========47%               ] medium_ctx128_forward.nsys-rep[1/1] [================68%         ] medium_ctx128_forward.nsys-rep[1/1] [===================79%      ] medium_ctx128_forward.nsys-rep[1/1] [===================80%      ] medium_ctx128_forward.nsys-rep[1/1] [========================100%] medium_ctx128_forward.nsys-rep[1/1] [========================100%] medium_ctx128_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx128_forward.nsys-rep
+=== Profiling medium ctx=256 mode=forward ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 144.35217753052711,
+    "stdev": 0.36374867273251,
+    "all": [
+      144.0313719213009,
+      144.39383149147034,
+      144.33100819587708,
+      143.61581578850746,
+      144.28310468792915,
+      144.86824348568916,
+      144.36062425374985,
+      144.86584439873695,
+      144.33034881949425,
+      144.44158226251602
+    ]
+  },
+  "total_step_ms": {
+    "mean": 144.35217753052711,
+    "stdev": 0.36374867273251,
+    "all": [
+      144.0313719213009,
+      144.39383149147034,
+      144.33100819587708,
+      143.61581578850746,
+      144.28310468792915,
+      144.86824348568916,
+      144.36062425374985,
+      144.86584439873695,
+      144.33034881949425,
+      144.44158226251602
+    ]
+  }
+}
+Generating '/tmp/nsys-report-a37a.qdstrm'
+[1/1] [0%                          ] medium_ctx256_forward.nsys-rep[1/1] [0%                          ] medium_ctx256_forward.nsys-rep[1/1] [====26%                     ] medium_ctx256_forward.nsys-rep[1/1] [==========47%               ] medium_ctx256_forward.nsys-rep[1/1] [================68%         ] medium_ctx256_forward.nsys-rep[1/1] [===================79%      ] medium_ctx256_forward.nsys-rep[1/1] [===================80%      ] medium_ctx256_forward.nsys-rep[1/1] [========================100%] medium_ctx256_forward.nsys-rep[1/1] [========================100%] medium_ctx256_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx256_forward.nsys-rep
+=== Profiling medium ctx=512 mode=forward ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 512,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 312.9003278911114,
+    "stdev": 0.7975463483403414,
+    "all": [
+      312.26710975170135,
+      311.99342012405396,
+      311.96582317352295,
+      312.4709390103817,
+      312.6189447939396,
+      313.9345869421959,
+      312.9223585128784,
+      314.0188045799732,
+      312.88962066173553,
+      313.9216713607311
+    ]
+  },
+  "total_step_ms": {
+    "mean": 312.9003278911114,
+    "stdev": 0.7975463483403414,
+    "all": [
+      312.26710975170135,
+      311.99342012405396,
+      311.96582317352295,
+      312.4709390103817,
+      312.6189447939396,
+      313.9345869421959,
+      312.9223585128784,
+      314.0188045799732,
+      312.88962066173553,
+      313.9216713607311
+    ]
+  }
+}
+Generating '/tmp/nsys-report-60a4.qdstrm'
+[1/1] [0%                          ] medium_ctx512_forward.nsys-rep[1/1] [0%                          ] medium_ctx512_forward.nsys-rep[1/1] [====27%                     ] medium_ctx512_forward.nsys-rep[1/1] [==========49%               ] medium_ctx512_forward.nsys-rep[1/1] [================71%         ] medium_ctx512_forward.nsys-rep[1/1] [===================80%      ] medium_ctx512_forward.nsys-rep[1/1] [===================81%      ] medium_ctx512_forward.nsys-rep[1/1] [========================100%] medium_ctx512_forward.nsys-rep[1/1] [========================100%] medium_ctx512_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx512_forward.nsys-rep
+=== Profiling medium ctx=1024 mode=forward ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 138, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 76, in annotated_scaled_dot_product_attention
+    attention_scores = einsum(Q, K, "... query d_k, ... key d_k -> ... query key") / (d_k ** 0.5)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/einops.py", line 916, in einsum
+    return get_backend(tensors[0]).einsum(pattern, *tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/_backends.py", line 288, in einsum
+    return self.torch.einsum(pattern, *x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/functional.py", line 407, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 249.31 MiB is free. Including non-PyTorch memory, this process has 10.66 GiB memory in use. Of the allocated memory 10.42 GiB is allocated by PyTorch, and 55.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-a5ba.qdstrm'
+[1/1] [0%                          ] medium_ctx1024_forward.nsys-rep[1/1] [0%                          ] medium_ctx1024_forward.nsys-rep[1/1] [7%                          ] medium_ctx1024_forward.nsys-rep[1/1] [8%                          ] medium_ctx1024_forward.nsys-rep[1/1] [=======================96%  ] medium_ctx1024_forward.nsys-rep[1/1] [========================100%] medium_ctx1024_forward.nsys-rep[1/1] [========================100%] medium_ctx1024_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx1024_forward.nsys-rep
+WARNING: failed for size=medium, ctx=1024, mode=forward (likely OOM). Continuing.
+=== Profiling large ctx=128 mode=forward ===
+{
+  "config": {
+    "size": "large",
+    "spec": {
+      "d_model": 1280,
+      "d_ff": 5120,
+      "num_layers": 36,
+      "num_heads": 20
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 172.26447202265263,
+    "stdev": 0.12842328895450042,
+    "all": [
+      172.25299775600433,
+      172.23183810710907,
+      172.1002385020256,
+      172.33151197433472,
+      172.0726303756237,
+      172.17767983675003,
+      172.2395271062851,
+      172.46948555111885,
+      172.38688096404076,
+      172.3819300532341
+    ]
+  },
+  "total_step_ms": {
+    "mean": 172.26447202265263,
+    "stdev": 0.12842328895450042,
+    "all": [
+      172.25299775600433,
+      172.23183810710907,
+      172.1002385020256,
+      172.33151197433472,
+      172.0726303756237,
+      172.17767983675003,
+      172.2395271062851,
+      172.46948555111885,
+      172.38688096404076,
+      172.3819300532341
+    ]
+  }
+}
+Generating '/tmp/nsys-report-2989.qdstrm'
+[1/1] [0%                          ] large_ctx128_forward.nsys-rep[1/1] [0%                          ] large_ctx128_forward.nsys-rep[1/1] [==19%                       ] large_ctx128_forward.nsys-rep[1/1] [======34%                   ] large_ctx128_forward.nsys-rep[1/1] [==========48%               ] large_ctx128_forward.nsys-rep[1/1] [==============63%           ] large_ctx128_forward.nsys-rep[1/1] [==================77%       ] large_ctx128_forward.nsys-rep[1/1] [===================79%      ] large_ctx128_forward.nsys-rep[1/1] [========================100%] large_ctx128_forward.nsys-rep[1/1] [========================100%] large_ctx128_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx128_forward.nsys-rep
+=== Profiling large ctx=256 mode=forward ===
+{
+  "config": {
+    "size": "large",
+    "spec": {
+      "d_model": 1280,
+      "d_ff": 5120,
+      "num_layers": 36,
+      "num_heads": 20
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 320.8271786570549,
+    "stdev": 0.654704320551351,
+    "all": [
+      319.4931522011757,
+      321.20126113295555,
+      320.1521337032318,
+      320.3974924981594,
+      321.07098400592804,
+      320.87719067931175,
+      321.7938207089901,
+      321.0386224091053,
+      321.3249631226063,
+      320.9221661090851
+    ]
+  },
+  "total_step_ms": {
+    "mean": 320.8271786570549,
+    "stdev": 0.654704320551351,
+    "all": [
+      319.4931522011757,
+      321.20126113295555,
+      320.1521337032318,
+      320.3974924981594,
+      321.07098400592804,
+      320.87719067931175,
+      321.7938207089901,
+      321.0386224091053,
+      321.3249631226063,
+      320.9221661090851
+    ]
+  }
+}
+Generating '/tmp/nsys-report-03d7.qdstrm'
+[1/1] [0%                          ] large_ctx256_forward.nsys-rep[1/1] [0%                          ] large_ctx256_forward.nsys-rep[1/1] [==20%                       ] large_ctx256_forward.nsys-rep[1/1] [======35%                   ] large_ctx256_forward.nsys-rep[1/1] [===========51%              ] large_ctx256_forward.nsys-rep[1/1] [===============66%          ] large_ctx256_forward.nsys-rep[1/1] [==================78%       ] large_ctx256_forward.nsys-rep[1/1] [===================79%      ] large_ctx256_forward.nsys-rep[1/1] [========================100%] large_ctx256_forward.nsys-rep[1/1] [========================100%] large_ctx256_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx256_forward.nsys-rep
+=== Profiling large ctx=512 mode=forward ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 138, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 80, in annotated_scaled_dot_product_attention
+    attention_weights = softmax(attention_scores, dim=-1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/nn_utils.py", line 7, in softmax
+    return exponentiated_rescaled_input / torch.sum(exponentiated_rescaled_input, dim=dim, keepdim=True)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 35.31 MiB is free. Including non-PyTorch memory, this process has 10.87 GiB memory in use. Of the allocated memory 10.67 GiB is allocated by PyTorch, and 15.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-111d.qdstrm'
+[1/1] [0%                          ] large_ctx512_forward.nsys-rep[1/1] [0%                          ] large_ctx512_forward.nsys-rep[1/1] [7%                          ] large_ctx512_forward.nsys-rep[1/1] [8%                          ] large_ctx512_forward.nsys-rep[1/1] [======================91%   ] large_ctx512_forward.nsys-rep[1/1] [=======================94%  ] large_ctx512_forward.nsys-rep[1/1] [=======================95%  ] large_ctx512_forward.nsys-rep[1/1] [========================100%] large_ctx512_forward.nsys-rep[1/1] [========================100%] large_ctx512_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx512_forward.nsys-rep
+WARNING: failed for size=large, ctx=512, mode=forward (likely OOM). Continuing.
+=== Profiling large ctx=1024 mode=forward ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 138, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 80, in annotated_scaled_dot_product_attention
+    attention_weights = softmax(attention_scores, dim=-1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/nn_utils.py", line 6, in softmax
+    exponentiated_rescaled_input = torch.exp(rescaled_input)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 320.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 237.31 MiB is free. Including non-PyTorch memory, this process has 10.67 GiB memory in use. Of the allocated memory 10.43 GiB is allocated by PyTorch, and 55.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-4aff.qdstrm'
+[1/1] [0%                          ] large_ctx1024_forward.nsys-rep[1/1] [0%                          ] large_ctx1024_forward.nsys-rep[1/1] [7%                          ] large_ctx1024_forward.nsys-rep[1/1] [8%                          ] large_ctx1024_forward.nsys-rep[1/1] [9%                          ] large_ctx1024_forward.nsys-rep[1/1] [10%                         ] large_ctx1024_forward.nsys-rep[1/1] [=======================96%  ] large_ctx1024_forward.nsys-rep[1/1] [========================100%] large_ctx1024_forward.nsys-rep[1/1] [========================100%] large_ctx1024_forward.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx1024_forward.nsys-rep
+WARNING: failed for size=large, ctx=1024, mode=forward (likely OOM). Continuing.
+=== Full train-step profiles (for d) ===
+=== Profiling small ctx=128 mode=train_step ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 47.02387861907482,
+    "stdev": 0.5737746029714099,
+    "all": [
+      46.75536975264549,
+      46.71773314476013,
+      46.82432487607002,
+      46.84092476963997,
+      48.55566471815109,
+      47.39219322800636,
+      46.89336195588112,
+      46.80883511900902,
+      46.73248901963234,
+      46.71788960695267
+    ]
+  },
+  "total_step_ms": {
+    "mean": 139.6253738552332,
+    "stdev": 1.5414023422850003,
+    "all": [
+      141.12413674592972,
+      138.94393667578697,
+      138.43173533678055,
+      139.35378193855286,
+      141.54422283172607,
+      138.97351920604706,
+      138.60036060214043,
+      138.4870819747448,
+      142.58020371198654,
+      138.21475952863693
+    ]
+  },
+  "backward_ms": {
+    "mean": 62.632641568779945,
+    "stdev": 1.430963681660335,
+    "all": [
+      64.41215053200722,
+      62.346819788217545,
+      61.72569841146469,
+      62.54672631621361,
+      62.77899071574211,
+      61.61166355013847,
+      61.735399067401886,
+      61.76910176873207,
+      65.87454304099083,
+      61.52532249689102
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 29.968853667378426,
+    "stdev": 0.09267506076125243,
+    "all": [
+      29.956616461277008,
+      29.879383742809296,
+      29.881712049245834,
+      29.96613085269928,
+      30.20956739783287,
+      29.96966242790222,
+      29.971599578857422,
+      29.909145087003708,
+      29.973171651363373,
+      29.971547424793243
+    ]
+  }
+}
+Generating '/tmp/nsys-report-db8f.qdstrm'
+[1/1] [0%                          ] small_ctx128_train_step.nsys-rep[1/1] [0%                          ] small_ctx128_train_step.nsys-rep[1/1] [==20%                       ] small_ctx128_train_step.nsys-rep[1/1] [=======37%                  ] small_ctx128_train_step.nsys-rep[1/1] [===========53%              ] small_ctx128_train_step.nsys-rep[1/1] [================70%         ] small_ctx128_train_step.nsys-rep[1/1] [==================78%       ] small_ctx128_train_step.nsys-rep[1/1] [===================79%      ] small_ctx128_train_step.nsys-rep[1/1] [========================100%] small_ctx128_train_step.nsys-rep[1/1] [========================100%] small_ctx128_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx128_train_step.nsys-rep
+=== Profiling small ctx=256 mode=train_step ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 52.328307181596756,
+    "stdev": 0.3532118547565941,
+    "all": [
+      52.53271386027336,
+      52.14173346757889,
+      52.08713561296463,
+      52.29378119111061,
+      53.2362200319767,
+      52.1995835006237,
+      52.04269662499428,
+      52.134301513433456,
+      52.42130160331726,
+      52.19360440969467
+    ]
+  },
+  "total_step_ms": {
+    "mean": 181.4829457551241,
+    "stdev": 0.5163245952909816,
+    "all": [
+      181.5117672085762,
+      181.40913918614388,
+      181.75185844302177,
+      181.4250349998474,
+      182.78349190950394,
+      181.119404733181,
+      180.9435859322548,
+      181.0465045273304,
+      181.4657524228096,
+      181.37291818857193
+    ]
+  },
+  "backward_ms": {
+    "mean": 99.17682260274887,
+    "stdev": 0.23353690569107882,
+    "all": [
+      99.10647943615913,
+      99.31159391999245,
+      99.46830570697784,
+      99.12624955177307,
+      99.60455447435379,
+      99.0261659026146,
+      98.985955119133,
+      98.81109371781349,
+      99.1189107298851,
+      99.20891746878624
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 29.977815970778465,
+    "stdev": 0.10019084338178011,
+    "all": [
+      29.872573912143707,
+      29.95581179857254,
+      30.1964171230793,
+      30.00500425696373,
+      29.942717403173447,
+      29.893655329942703,
+      29.914934188127518,
+      30.10110929608345,
+      29.92554008960724,
+      29.97039631009102
+    ]
+  }
+}
+Generating '/tmp/nsys-report-6c3a.qdstrm'
+[1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [==20%                       ] small_ctx256_train_step.nsys-rep[1/1] [=======36%                  ] small_ctx256_train_step.nsys-rep[1/1] [===========52%              ] small_ctx256_train_step.nsys-rep[1/1] [================68%         ] small_ctx256_train_step.nsys-rep[1/1] [==================78%       ] small_ctx256_train_step.nsys-rep[1/1] [===================79%      ] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx256_train_step.nsys-rep
+=== Profiling small ctx=512 mode=train_step ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 512,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 104.51234951615334,
+    "stdev": 0.16008343618301216,
+    "all": [
+      104.53522577881813,
+      104.66685518622398,
+      104.35405001044273,
+      104.85010221600533,
+      104.5105867087841,
+      104.37425598502159,
+      104.31773588061333,
+      104.48753088712692,
+      104.58265244960785,
+      104.44450005888939
+    ]
+  },
+  "total_step_ms": {
+    "mean": 350.3339361399412,
+    "stdev": 0.6568883570036397,
+    "all": [
+      349.72868114709854,
+      350.8843891322613,
+      349.7959077358246,
+      349.87565129995346,
+      350.5275808274746,
+      350.11497512459755,
+      349.8179502785206,
+      351.8582209944725,
+      350.50445795059204,
+      350.231546908617
+    ]
+  },
+  "backward_ms": {
+    "mean": 215.83045981824398,
+    "stdev": 0.6645233597465241,
+    "all": [
+      215.25035053491592,
+      216.26681089401245,
+      215.2295522391796,
+      214.9784341454506,
+      216.13235399127007,
+      215.77423438429832,
+      215.53188934922218,
+      217.2999307513237,
+      215.94642847776413,
+      215.89461341500282
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 29.9911268055439,
+    "stdev": 0.09706217736715987,
+    "all": [
+      29.943104833364487,
+      29.95072305202484,
+      30.21230548620224,
+      30.047114938497543,
+      29.884640127420425,
+      29.966484755277634,
+      29.968325048685074,
+      30.07075935602188,
+      29.975377023220062,
+      29.892433434724808
+    ]
+  }
+}
+Generating '/tmp/nsys-report-8cee.qdstrm'
+[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [==21%                       ] small_ctx512_train_step.nsys-rep[1/1] [=======37%                  ] small_ctx512_train_step.nsys-rep[1/1] [============54%             ] small_ctx512_train_step.nsys-rep[1/1] [================71%         ] small_ctx512_train_step.nsys-rep[1/1] [==================78%       ] small_ctx512_train_step.nsys-rep[1/1] [===================79%      ] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_train_step.nsys-rep
+=== Profiling small ctx=1024 mode=train_step ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 153, in run_step
+    loss.backward()
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/_tensor.py", line 626, in backward
+    torch.autograd.backward(
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/autograd/graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 158.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 119.31 MiB is free. Including non-PyTorch memory, this process has 10.79 GiB memory in use. Of the allocated memory 10.54 GiB is allocated by PyTorch, and 55.79 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-5e01.qdstrm'
+[1/1] [0%                          ] small_ctx1024_train_step.nsys-rep[1/1] [0%                          ] small_ctx1024_train_step.nsys-rep[1/1] [6%                          ] small_ctx1024_train_step.nsys-rep[1/1] [==================77%       ] small_ctx1024_train_step.nsys-rep[1/1] [======================91%   ] small_ctx1024_train_step.nsys-rep[1/1] [========================100%] small_ctx1024_train_step.nsys-rep[1/1] [========================100%] small_ctx1024_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx1024_train_step.nsys-rep
+WARNING: failed for size=small, ctx=1024, mode=train_step (likely OOM). Continuing.
+=== Profiling medium ctx=128 mode=train_step ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 94.5191953331232,
+    "stdev": 0.6576587018683658,
+    "all": [
+      94.06455606222153,
+      93.79438683390617,
+      94.36221793293953,
+      93.96743029356003,
+      94.68887001276016,
+      94.28064897656441,
+      94.23264861106873,
+      94.53209117054939,
+      95.93077376484871,
+      95.33832967281342
+    ]
+  },
+  "total_step_ms": {
+    "mean": 344.1430151462555,
+    "stdev": 0.9360654966423726,
+    "all": [
+      343.4039242565632,
+      342.91495382785797,
+      343.81380304694176,
+      343.65540370345116,
+      344.4983772933483,
+      344.1161587834358,
+      343.44595298171043,
+      344.1742844879627,
+      345.6892520189285,
+      345.71804106235504
+    ]
+  },
+  "backward_ms": {
+    "mean": 152.3757267743349,
+    "stdev": 0.31478720229386226,
+    "all": [
+      152.14115008711815,
+      151.98691934347153,
+      152.21203491091728,
+      152.132760733366,
+      152.68392488360405,
+      152.3851752281189,
+      152.20244973897934,
+      152.5183990597725,
+      152.4486355483532,
+      153.04581820964813
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 97.24809303879738,
+    "stdev": 0.16626556397069833,
+    "all": [
+      97.19821810722351,
+      97.13364765048027,
+      97.23955020308495,
+      97.55521267652512,
+      97.1255823969841,
+      97.45033457875252,
+      97.01085463166237,
+      97.12379425764084,
+      97.30984270572662,
+      97.3338931798935
+    ]
+  }
+}
+Generating '/tmp/nsys-report-8a16.qdstrm'
+[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [11%                         ] medium_ctx128_train_step.nsys-rep[1/1] [==20%                       ] medium_ctx128_train_step.nsys-rep[1/1] [=====29%                    ] medium_ctx128_train_step.nsys-rep[1/1] [=======38%                  ] medium_ctx128_train_step.nsys-rep[1/1] [==========47%               ] medium_ctx128_train_step.nsys-rep[1/1] [============55%             ] medium_ctx128_train_step.nsys-rep[1/1] [==============64%           ] medium_ctx128_train_step.nsys-rep[1/1] [=================73%        ] medium_ctx128_train_step.nsys-rep[1/1] [==================77%       ] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx128_train_step.nsys-rep
+=== Profiling medium ctx=256 mode=train_step ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "annotate_attention": true
+  },
+  "forward_ms": {
+    "mean": 143.72808188199997,
+    "stdev": 0.2856101462540161,
+    "all": [
+      143.49039644002914,
+      143.7601074576378,
+      143.74316111207008,
+      143.76098662614822,
+      143.41571554541588,
+      144.0930999815464,
+      143.33197847008705,
+      144.1776640713215,
+      143.95899698138237,
+      143.54871213436127
+    ]
+  },
+  "total_step_ms": {
+    "mean": 537.3412486165762,
+    "stdev": 0.624938474953773,
+    "all": [
+      537.0472893118858,
+      537.7394817769527,
+      537.1789336204529,
+      537.506315857172,
+      537.3050980269909,
+      538.230124861002,
+      536.13705560565,
+      538.209829479456,
+      537.1424071490765,
+      536.9159504771233
+    ]
+  },
+  "backward_ms": {
+    "mean": 296.32138535380363,
+    "stdev": 0.37351189758231046,
+    "all": [
+      296.19841277599335,
+      296.7718243598938,
+      296.28904163837433,
+      296.3196523487568,
+      296.47965356707573,
+      296.8088872730732,
+      295.61619833111763,
+      296.63947224617004,
+      296.1525321006775,
+      295.938178896904
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 97.29178138077259,
+    "stdev": 0.1388174808333942,
+    "all": [
+      97.35848009586334,
+      97.20754995942116,
+      97.14673087000847,
+      97.425676882267,
+      97.40972891449928,
+      97.32813760638237,
+      97.18887880444527,
+      97.39269316196442,
+      97.0308780670166,
+      97.429059445858
+    ]
+  }
+}
+Generating '/tmp/nsys-report-ebd1.qdstrm'
+[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [10%                         ] medium_ctx256_train_step.nsys-rep[1/1] [==19%                       ] medium_ctx256_train_step.nsys-rep[1/1] [====27%                     ] medium_ctx256_train_step.nsys-rep[1/1] [======35%                   ] medium_ctx256_train_step.nsys-rep[1/1] [=========44%                ] medium_ctx256_train_step.nsys-rep[1/1] [===========52%              ] medium_ctx256_train_step.nsys-rep[1/1] [=============60%            ] medium_ctx256_train_step.nsys-rep[1/1] [================68%         ] medium_ctx256_train_step.nsys-rep[1/1] [==================76%       ] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx256_train_step.nsys-rep
+=== Profiling medium ctx=512 mode=train_step ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 138, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 76, in annotated_scaled_dot_product_attention
+    attention_scores = einsum(Q, K, "... query d_k, ... key d_k -> ... query key") / (d_k ** 0.5)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 7.31 MiB is free. Including non-PyTorch memory, this process has 10.89 GiB memory in use. Of the allocated memory 10.62 GiB is allocated by PyTorch, and 83.88 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-3a68.qdstrm'
+[1/1] [0%                          ] medium_ctx512_train_step.nsys-rep[1/1] [0%                          ] medium_ctx512_train_step.nsys-rep[1/1] [5%                          ] medium_ctx512_train_step.nsys-rep[1/1] [=============60%            ] medium_ctx512_train_step.nsys-rep[1/1] [=====================87%    ] medium_ctx512_train_step.nsys-rep[1/1] [========================100%] medium_ctx512_train_step.nsys-rep[1/1] [========================100%] medium_ctx512_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx512_train_step.nsys-rep
+WARNING: failed for size=medium, ctx=512, mode=train_step (likely OOM). Continuing.
+=== Profiling medium ctx=1024 mode=train_step ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 138, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 76, in annotated_scaled_dot_product_attention
+    attention_scores = einsum(Q, K, "... query d_k, ... key d_k -> ... query key") / (d_k ** 0.5)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/einops.py", line 916, in einsum
+    return get_backend(tensors[0]).einsum(pattern, *tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/_backends.py", line 288, in einsum
+    return self.torch.einsum(pattern, *x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/functional.py", line 407, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 249.31 MiB is free. Including non-PyTorch memory, this process has 10.66 GiB memory in use. Of the allocated memory 10.42 GiB is allocated by PyTorch, and 55.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-fea4.qdstrm'
+[1/1] [0%                          ] medium_ctx1024_train_step.nsys-rep[1/1] [0%                          ] medium_ctx1024_train_step.nsys-rep[1/1] [7%                          ] medium_ctx1024_train_step.nsys-rep[1/1] [8%                          ] medium_ctx1024_train_step.nsys-rep[1/1] [=======================96%  ] medium_ctx1024_train_step.nsys-rep[1/1] [========================100%] medium_ctx1024_train_step.nsys-rep[1/1] [========================100%] medium_ctx1024_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx1024_train_step.nsys-rep
+WARNING: failed for size=medium, ctx=1024, mode=train_step (likely OOM). Continuing.
+=== Profiling large ctx=128 mode=train_step ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 161, in run_step
+    optimizer.step()
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/adamw.py", line 232, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/adamw.py", line 171, in _init_group
+    state["exp_avg"] = torch.zeros_like(
+                       ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 19.31 MiB is free. Including non-PyTorch memory, this process has 10.88 GiB memory in use. Of the allocated memory 10.43 GiB is allocated by PyTorch, and 266.20 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-ec89.qdstrm'
+[1/1] [0%                          ] large_ctx128_train_step.nsys-rep[1/1] [0%                          ] large_ctx128_train_step.nsys-rep[1/1] [5%                          ] large_ctx128_train_step.nsys-rep[1/1] [============56%             ] large_ctx128_train_step.nsys-rep[1/1] [=====================87%    ] large_ctx128_train_step.nsys-rep[1/1] [========================100%] large_ctx128_train_step.nsys-rep[1/1] [========================100%] large_ctx128_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx128_train_step.nsys-rep
+WARNING: failed for size=large, ctx=128, mode=train_step (likely OOM). Continuing.
+=== Profiling large ctx=256 mode=train_step ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 161, in run_step
+    optimizer.step()
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/adamw.py", line 232, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/adamw.py", line 171, in _init_group
+    state["exp_avg"] = torch.zeros_like(
+                       ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 21.31 MiB is free. Including non-PyTorch memory, this process has 10.88 GiB memory in use. Of the allocated memory 10.40 GiB is allocated by PyTorch, and 294.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Generating '/tmp/nsys-report-d7c1.qdstrm'
+[1/1] [0%                          ] large_ctx256_train_step.nsys-rep[1/1] [0%                          ] large_ctx256_train_step.nsys-rep[1/1] [5%                          ] large_ctx256_train_step.nsys-rep[1/1] [============56%             ] large_ctx256_train_step.nsys-rep[1/1] [=====================86%    ] large_ctx256_train_step.nsys-rep[1/1] [========================100%] large_ctx256_train_step.nsys-rep[1/1] [========================100%] large_ctx256_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx256_train_step.nsys-rep
+WARNING: failed for size=large, ctx=256, mode=train_step (likely OOM). Continuing.
+=== Profiling large ctx=512 mode=train_step ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 233, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 169, in main
+    run_step(profiled=False)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 138, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 80, in annotated_scaled_dot_product_attention
+    attention_weights = softmax(attention_scores, dim=-1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/nn_utils.py", line 7, in softmax
+    return exponentiated_rescaled_input / torch.sum(exponentiated_rescaled_input, dim=dim, keepdim=True)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 35.31 MiB is free. Including non-PyTorch memory, this process has 10.87 GiB memory in use. Of the allocated memory 10.67 GiB is allocated by PyTorch, and 15.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
