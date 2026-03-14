@@ -29,10 +29,10 @@ conda activate base
 mkdir -p profiles/memory
 
 # Assignment 1.1.6 target setup:
-# - model: large
+# - model: small
 # - context lengths: 128, 256, 512
 # - modes: forward and full training step
-SIZE="large"
+SIZE="small"
 CONTEXTS=(128 256 512)
 MODES=(forward train_step)
 
