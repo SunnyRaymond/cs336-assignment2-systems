@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=nsys_profile_rtx
 #SBATCH --partition=defq
-#SBATCH --gres=gpu:2
+#SBATCH --gres=gpu:1
 #SBATCH --constraint=TitanRTX
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=120G
