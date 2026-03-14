@@ -8,7 +8,7 @@
       "num_heads": 12
     },
     "batch_size": 4,
-    "context_length": 128,
+    "context_length": 256,
     "vocab_size": 10000,
     "mode": "train_step",
     "loss": "cross_entropy",
@@ -21,36 +21,36 @@
     "memory_profile": true
   },
   "forward_ms": {
-    "mean": 44.395796954631805,
+    "mean": 51.98177695274353,
     "stdev": 0.0,
     "all": [
-      44.395796954631805
+      51.98177695274353
     ]
   },
   "total_step_ms": {
-    "mean": 126.51471421122551,
+    "mean": 180.5465742945671,
     "stdev": 0.0,
     "all": [
-      126.51471421122551
+      180.5465742945671
     ]
   },
   "backward_ms": {
-    "mean": 52.2809773683548,
+    "mean": 98.72417524456978,
     "stdev": 0.0,
     "all": [
-      52.2809773683548
+      98.72417524456978
     ]
   },
   "optimizer_step_ms": {
-    "mean": 29.837939888238907,
+    "mean": 29.8406220972538,
     "stdev": 0.0,
     "all": [
-      29.837939888238907
+      29.8406220972538
     ]
   },
   "memory": {
-    "snapshot_path": "profiles/memory/memory_snapshot_small_ctx128_train_step_amp-none.pickle",
-    "peak_allocated_mb": 2489.15576171875,
-    "peak_reserved_mb": 2526.0
+    "snapshot_path": "profiles/memory/memory_snapshot_small_ctx256_train_step_amp-none.pickle",
+    "peak_allocated_mb": 3025.615234375,
+    "peak_reserved_mb": 3046.0
   }
 }

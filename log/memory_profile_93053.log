@@ -8,3 +8,26 @@ Date: Sat Mar 14 15:32:25 CET 2026
 === Memory profiling size=small ctx=128 mode=train_step amp=none ===
 [W314 15:32:44.074114349 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
 [W314 15:32:44.076187470 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+=== Memory profiling size=small ctx=256 mode=forward amp=none ===
+=== Memory profiling size=small ctx=256 mode=train_step amp=none ===
+[W314 15:33:05.945923538 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+[W314 15:33:05.995798771 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+=== Memory profiling size=small ctx=512 mode=forward amp=none ===
+=== Memory profiling size=small ctx=512 mode=train_step amp=none ===
+[W314 15:33:28.464047908 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+[W314 15:33:28.627480756 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+=== Mixed precision memory profiles (part c) ===
+=== Memory profiling size=small ctx=128 mode=forward amp=float16 ===
+=== Memory profiling size=small ctx=128 mode=train_step amp=float16 ===
+[W314 15:33:49.028543603 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+[W314 15:33:49.030265736 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+=== Memory profiling size=small ctx=256 mode=forward amp=float16 ===
+=== Memory profiling size=small ctx=256 mode=train_step amp=float16 ===
+[W314 15:34:11.028537305 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+[W314 15:34:11.078809667 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+=== Memory profiling size=small ctx=512 mode=forward amp=float16 ===
+=== Memory profiling size=small ctx=512 mode=train_step amp=float16 ===
+[W314 15:34:34.389050743 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+[W314 15:34:35.531113967 unwind.cpp:218] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+=== Done ===
+Sat Mar 14 15:34:38 CET 2026

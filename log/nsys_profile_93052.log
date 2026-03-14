@@ -1001,3 +1001,9 @@ Generated:
     ]
   }
 }
+Generating '/tmp/nsys-report-712e.qdstrm'
+[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [10%                         ] medium_ctx256_train_step.nsys-rep[1/1] [==19%                       ] medium_ctx256_train_step.nsys-rep[1/1] [====27%                     ] medium_ctx256_train_step.nsys-rep[1/1] [======35%                   ] medium_ctx256_train_step.nsys-rep[1/1] [=========44%                ] medium_ctx256_train_step.nsys-rep[1/1] [===========52%              ] medium_ctx256_train_step.nsys-rep[1/1] [=============60%            ] medium_ctx256_train_step.nsys-rep[1/1] [================68%         ] medium_ctx256_train_step.nsys-rep[1/1] [==================76%       ] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx256_train_step.nsys-rep
+=== Done ===
+Sat Mar 14 15:32:50 CET 2026
