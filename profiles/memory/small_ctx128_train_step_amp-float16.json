@@ -1,0 +1,56 @@
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 1,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "float16",
+    "annotate_attention": false,
+    "memory_profile": true
+  },
+  "forward_ms": {
+    "mean": 49.6310256421566,
+    "stdev": 0.0,
+    "all": [
+      49.6310256421566
+    ]
+  },
+  "total_step_ms": {
+    "mean": 138.90685141086578,
+    "stdev": 0.0,
+    "all": [
+      138.90685141086578
+    ]
+  },
+  "backward_ms": {
+    "mean": 59.576913714408875,
+    "stdev": 0.0,
+    "all": [
+      59.576913714408875
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 29.69891205430031,
+    "stdev": 0.0,
+    "all": [
+      29.69891205430031
+    ]
+  },
+  "memory": {
+    "snapshot_path": "profiles/memory/memory_snapshot_small_ctx128_train_step_amp-float16.pickle",
+    "peak_allocated_mb": 2479.39013671875,
+    "peak_reserved_mb": 2626.0
+  }
+}

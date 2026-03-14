@@ -1,0 +1,42 @@
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "forward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 1,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "float16",
+    "annotate_attention": false,
+    "memory_profile": true
+  },
+  "forward_ms": {
+    "mean": 61.7300309240818,
+    "stdev": 0.0,
+    "all": [
+      61.7300309240818
+    ]
+  },
+  "total_step_ms": {
+    "mean": 61.7300309240818,
+    "stdev": 0.0,
+    "all": [
+      61.7300309240818
+    ]
+  },
+  "memory": {
+    "snapshot_path": "profiles/memory/memory_snapshot_small_ctx256_forward_amp-float16.pickle",
+    "peak_allocated_mb": 1645.5849609375,
+    "peak_reserved_mb": 1666.0
+  }
+}
