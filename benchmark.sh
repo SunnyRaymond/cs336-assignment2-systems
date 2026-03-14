@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=benchmark
 #SBATCH --partition=fatq
-#SBATCH --constraints=TitanRTX
+#SBATCH --constraint=TitanRTX
 #SBATCH --gres=gpu:2
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=120G
