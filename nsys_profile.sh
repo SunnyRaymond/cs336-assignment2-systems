@@ -3,8 +3,8 @@
 #SBATCH --partition=fatq
 #SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=16
-#SBATCH --mem=64G
-#SBATCH --time=2-00:00:00
+#SBATCH --mem=120G
+#SBATCH --time=7-00:00:00
 #SBATCH --output=log/%x_%j.log
 #SBATCH --error=log/%x_%j.log
 
