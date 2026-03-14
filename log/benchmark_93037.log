@@ -1,0 +1,378 @@
+=== Job info ===
+Job ID: 93037
+Host: node203
+PWD:  /var/scratch/dpp2567/cs336-assignment2-systems
+Date: Sat Mar 14 14:12:54 CET 2026
+
+=== GPU info ===
+Sat Mar 14 14:12:55 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce GTX 1080 Ti     Off |   00000000:02:00.0 Off |                  N/A |
+| 19%   27C    P0             59W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce GTX 1080 Ti     Off |   00000000:03:00.0 Off |                  N/A |
+| 16%   33C    P0             61W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce GTX 1080 Ti     Off |   00000000:82:00.0 Off |                  N/A |
+| 14%   29C    P0             60W /  250W |       0MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce GTX 1080 Ti     Off |   00000000:83:00.0 Off |                  N/A |
+| 14%   27C    P0             53W /  250W |       0MiB /  11264MiB |      1%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+=== Python / uv info ===
+/var/scratch/dpp2567/miniconda3/bin/python
+/var/scratch/dpp2567/miniconda3/bin/uv
+Python 3.13.11
+
+=== Benchmark start ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward-backward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32"
+  },
+  "forward_ms": {
+    "mean": 39.49793055653572,
+    "stdev": 0.09864560492863547,
+    "all": [
+      39.27542269229889,
+      39.45592790842056,
+      39.53845426440239,
+      39.60113227367401,
+      39.479486644268036,
+      39.61068019270897,
+      39.55957293510437,
+      39.421163499355316,
+      39.53288868069649,
+      39.50457647442818
+    ]
+  },
+  "backward_ms": {
+    "mean": 51.03098824620247,
+    "stdev": 0.039323020805020606,
+    "all": [
+      50.98007619380951,
+      51.03519931435585,
+      51.032934337854385,
+      51.037389785051346,
+      51.00083723664284,
+      51.051147282123566,
+      50.982002168893814,
+      51.009561866521835,
+      51.08610913157463,
+      51.094625145196915
+    ]
+  },
+  "total_fwd_bwd_ms": {
+    "mean": 90.52891880273819,
+    "stdev": 0.12151151238436879,
+    "all": [
+      90.2554988861084,
+      90.49112722277641,
+      90.57138860225677,
+      90.63852205872536,
+      90.48032388091087,
+      90.66182747483253,
+      90.54157510399818,
+      90.43072536587715,
+      90.61899781227112,
+      90.59920161962509
+    ]
+  }
+}
+===== small =====
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward-backward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32"
+  },
+  "forward_ms": {
+    "mean": 38.02154362201691,
+    "stdev": 1.0095500393191734,
+    "all": [
+      37.69582509994507,
+      37.77170926332474,
+      37.75323927402496,
+      37.73391619324684,
+      37.67931088805199,
+      37.642307579517365,
+      37.40386664867401,
+      37.80442476272583,
+      37.857457995414734,
+      40.87337851524353
+    ]
+  },
+  "backward_ms": {
+    "mean": 51.24286897480488,
+    "stdev": 0.15680663373799608,
+    "all": [
+      51.09396576881409,
+      51.00926756858826,
+      50.98031461238861,
+      51.29670724272728,
+      51.29564553499222,
+      51.29595845937729,
+      51.36653408408165,
+      51.2906052172184,
+      51.38842761516571,
+      51.41126364469528
+    ]
+  },
+  "total_fwd_bwd_ms": {
+    "mean": 89.26441259682178,
+    "stdev": 1.0739578294719818,
+    "all": [
+      88.78979086875916,
+      88.780976831913,
+      88.73355388641357,
+      89.03062343597412,
+      88.9749564230442,
+      88.93826603889465,
+      88.77040073275566,
+      89.09502997994423,
+      89.24588561058044,
+      92.28464215993881
+    ]
+  }
+}
+===== medium =====
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward-backward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32"
+  },
+  "forward_ms": {
+    "mean": 78.6726001650095,
+    "stdev": 0.30910870965477744,
+    "all": [
+      78.1434029340744,
+      78.68555560708046,
+      79.23686504364014,
+      78.65683361887932,
+      78.2255232334137,
+      78.7784606218338,
+      78.83203029632568,
+      78.80205661058426,
+      78.62095162272453,
+      78.7443220615387
+    ]
+  },
+  "backward_ms": {
+    "mean": 150.7137056440115,
+    "stdev": 0.04957236576056694,
+    "all": [
+      150.7353037595749,
+      150.59934183955193,
+      150.71413666009903,
+      150.6757214665413,
+      150.7732830941677,
+      150.69780498743057,
+      150.70468559861183,
+      150.73643252253532,
+      150.75601637363434,
+      150.74433013796806
+    ]
+  },
+  "total_fwd_bwd_ms": {
+    "mean": 229.386305809021,
+    "stdev": 0.29894344725926264,
+    "all": [
+      228.8787066936493,
+      229.28489744663239,
+      229.95100170373917,
+      229.3325550854206,
+      228.9988063275814,
+      229.47626560926437,
+      229.53671589493752,
+      229.53848913311958,
+      229.37696799635887,
+      229.48865219950676
+    ]
+  }
+}
+===== large =====
+{
+  "config": {
+    "size": "large",
+    "spec": {
+      "d_model": 1280,
+      "d_ff": 5120,
+      "num_layers": 36,
+      "num_heads": 20
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "forward-backward",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32"
+  },
+  "forward_ms": {
+    "mean": 170.92837505042553,
+    "stdev": 0.15830307013076353,
+    "all": [
+      170.63938826322556,
+      170.95665633678436,
+      170.81640288233757,
+      171.17954045534134,
+      170.79443857073784,
+      171.0495986044407,
+      170.84848880767822,
+      171.05749621987343,
+      171.02701216936111,
+      170.91472819447517
+    ]
+  },
+  "backward_ms": {
+    "mean": 341.02980606257915,
+    "stdev": 0.15264114424470532,
+    "all": [
+      340.94835072755814,
+      341.07616543769836,
+      340.8942073583603,
+      340.9002609550953,
+      340.90040251612663,
+      340.9689851105213,
+      341.1681540310383,
+      341.0378247499466,
+      341.0189747810364,
+      341.38473495841026
+    ]
+  },
+  "total_fwd_bwd_ms": {
+    "mean": 511.95818111300474,
+    "stdev": 0.22067731118343806,
+    "all": [
+      511.5877389907837,
+      512.0328217744827,
+      511.71061024069786,
+      512.0798014104366,
+      511.69484108686447,
+      512.018583714962,
+      512.0166428387165,
+      512.09532096982,
+      512.0459869503975,
+      512.2994631528854
+    ]
+  }
+}
+===== xl =====
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 168, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 119, in main
+    run_step()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 98, in run_step
+    logits = model(x)
+             ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 384, in forward
+    x_ffn = self.ffn(self.ln2(attn_sublayer_output))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 397, in forward
+    return self.w2(silu(self.w1(x)) * self.w3(x))
+                        ^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 41, in forward
+    return einsum(x, self.weight, "... d_in, d_out d_in -> ... d_out")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/einops.py", line 916, in einsum
+    return get_backend(tensors[0]).einsum(pattern, *tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/_backends.py", line 288, in einsum
+    return self.torch.einsum(pattern, *x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/functional.py", line 407, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 13.31 MiB is free. Including non-PyTorch memory, this process has 10.89 GiB memory in use. Of the allocated memory 10.72 GiB is allocated by PyTorch, and 9.21 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
