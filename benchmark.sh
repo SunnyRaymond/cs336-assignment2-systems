@@ -38,7 +38,8 @@ which uv || true
 python --version || true
 echo
 
-echo "=== Benchmark start ==="
+echo "=== 1.1.3 Benchmark start ==="
+echo "=== a ==="
 
 # (a) Single run example (forward+backward)
 uv run python -m cs336_systems.benchmark \
@@ -48,6 +49,8 @@ uv run python -m cs336_systems.benchmark \
   --measure-steps 10 \
   --mode forward-backward \
   --device cuda
+
+echo "=== b ==="
 
 # (b) Table 1 sizes, 5 warmup + 10 measured (forward+backward)
 for s in small medium large xl 2.7b; do
@@ -61,6 +64,7 @@ for s in small medium large xl 2.7b; do
     --device cuda
 done
 
+echo "=== c ==="
 # (c) Warmup sensitivity: 0, 1, 2, 5 warmup steps
 for w in 0 1 2 5; do
   echo "===== warmup=$w ====="
