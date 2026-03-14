@@ -53,7 +53,9 @@ uv run python -m cs336_systems.benchmark \
 echo "=== b ==="
 
 # (b) Table 1 sizes, 5 warmup + 10 measured (forward+backward)
-for s in small medium large xl 2.7b; do
+# NOTE: On 11GB GPUs (e.g., 1080Ti), XL and 2.7B are likely to OOM in this setup.
+# If you later have larger-memory GPUs, you can re-add: xl 2.7b
+for s in small medium large; do
   echo "===== $s ====="
   uv run python -m cs336_systems.benchmark \
     --size "$s" \
