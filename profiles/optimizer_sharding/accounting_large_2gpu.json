@@ -12,7 +12,7 @@
     "memory_after_init_mb": 3698.0439453125,
     "memory_before_optimizer_step_peak_mb": 14813.21728515625,
     "memory_after_optimizer_step_peak_mb": 14813.21728515625,
-    "time_per_iteration_ms_mean": 521.4658632874489,
+    "time_per_iteration_ms_mean": 520.1926600188017,
     "optimizer_state_bytes_estimate": 7755294720.0,
     "param_bytes": 3877647360.0
   },
@@ -20,7 +20,7 @@
     "memory_after_init_mb": 3714.2939453125,
     "memory_before_optimizer_step_peak_mb": 11115.20458984375,
     "memory_after_optimizer_step_peak_mb": 11115.20458984375,
-    "time_per_iteration_ms_mean": 1031.638665497303,
+    "time_per_iteration_ms_mean": 1027.832494303584,
     "optimizer_state_bytes_estimate": 3877647360.0,
     "param_bytes": 3877647360.0
   },
@@ -35,8 +35,8 @@
         "memory_after_init_reserved_mb": 3702.0,
         "memory_before_optimizer_step_peak_mb": 14813.21728515625,
         "memory_after_optimizer_step_peak_mb": 14813.21728515625,
-        "time_per_iteration_ms_mean": 519.5683851838112,
-        "time_per_iteration_ms_stdev": 2.581823961095685
+        "time_per_iteration_ms_mean": 521.0070237517357,
+        "time_per_iteration_ms_stdev": 1.1972316656123565
       },
       "sharded": {
         "mode": "sharded",
@@ -46,8 +46,8 @@
         "memory_after_init_reserved_mb": 3742.0,
         "memory_before_optimizer_step_peak_mb": 11212.85595703125,
         "memory_after_optimizer_step_peak_mb": 11212.85595703125,
-        "time_per_iteration_ms_mean": 1031.6420748829842,
-        "time_per_iteration_ms_stdev": 1.0974442691766497
+        "time_per_iteration_ms_mean": 1027.8567738831043,
+        "time_per_iteration_ms_stdev": 0.4021979072653809
       }
     },
     {
@@ -60,8 +60,8 @@
         "memory_after_init_reserved_mb": 3702.0,
         "memory_before_optimizer_step_peak_mb": 14813.21728515625,
         "memory_after_optimizer_step_peak_mb": 14813.21728515625,
-        "time_per_iteration_ms_mean": 523.3633413910866,
-        "time_per_iteration_ms_stdev": 4.40153056318344
+        "time_per_iteration_ms_mean": 519.3782962858677,
+        "time_per_iteration_ms_stdev": 1.4393515150887801
       },
       "sharded": {
         "mode": "sharded",
@@ -71,8 +71,8 @@
         "memory_after_init_reserved_mb": 3742.0,
         "memory_before_optimizer_step_peak_mb": 11017.55322265625,
         "memory_after_optimizer_step_peak_mb": 11017.55322265625,
-        "time_per_iteration_ms_mean": 1031.6352561116219,
-        "time_per_iteration_ms_stdev": 0.9604874736418909
+        "time_per_iteration_ms_mean": 1027.8082147240639,
+        "time_per_iteration_ms_stdev": 0.4956051894067105
       }
     }
   ]
