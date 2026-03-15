@@ -1,8 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=nsys_profile
-#SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=64G
+#SBATCH --gres=gpu:1
 #SBATCH --time=7-00:00:00
 #SBATCH --output=log/%x_%j.log
 #SBATCH --error=log/%x_%j.log
