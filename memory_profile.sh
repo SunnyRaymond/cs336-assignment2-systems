@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=memory_profile
-#SBATCH --partition=fatq
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G

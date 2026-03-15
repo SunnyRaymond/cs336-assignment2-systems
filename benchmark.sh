@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=benchmark
-#SBATCH --partition=fatq
 #SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=120G
