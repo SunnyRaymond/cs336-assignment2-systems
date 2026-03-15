@@ -1,0 +1,2 @@
+change uv cache dir to /var/scratch/dpp2567/.uv_cache
+Naive DDP verification passed: rank-0 DDP weights match single-process baseline.
