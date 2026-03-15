@@ -1,1 +1,43 @@
 change uv cache dir to /var/scratch/dpp2567/.uv_cache
+[rank0]:[W315 05:41:48.517074973 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0315 05:41:49.379000 2544616 torch/multiprocessing/spawn.py:169] Terminating process 2544624 via signal SIGTERM
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/naive_ddp_benchmark.py", line 149, in <module>
+    main()
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/naive_ddp_benchmark.py", line 145, in main
+    mp.spawn(_worker, args=(args,), nprocs=args.world_size, join=True)
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 340, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 296, in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 215, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+    fn(i, *args)
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/naive_ddp_benchmark.py", line 91, in _worker
+    _ = one_step()
+        ^^^^^^^^^^
+  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/naive_ddp_benchmark.py", line 85, in one_step
+    optimizer.step()
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/adamw.py", line 232, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/optim/adamw.py", line 175, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+                          ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 40.00 MiB. GPU 0 has a total capacity of 23.46 GiB of which 34.81 MiB is free. Including non-PyTorch memory, this process has 23.43 GiB memory in use. Of the allocated memory 22.47 GiB is allocated by PyTorch, and 696.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
