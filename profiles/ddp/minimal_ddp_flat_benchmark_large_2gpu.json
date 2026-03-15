@@ -1,0 +1,23 @@
+{
+  "setup": {
+    "world_size": 2,
+    "backend": "nccl",
+    "model_size": "small",
+    "batch_size_global": 2,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "warmup_steps": 3,
+    "measure_steps": 10,
+    "optimizer": "adamw"
+  },
+  "individual_allreduce": {
+    "time_per_step_ms": 295.15508599579334,
+    "time_in_gradient_communication_ms": 150.19681006669998,
+    "communication_fraction_percent": 50.887412741853566
+  },
+  "flattened_allreduce": {
+    "time_per_step_ms": 287.14697379618883,
+    "time_in_gradient_communication_ms": 143.8023054972291,
+    "communication_fraction_percent": 50.079674074803805
+  }
+}
