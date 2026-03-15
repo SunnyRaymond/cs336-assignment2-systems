@@ -1,1910 +1,0 @@
-=== Job info ===
-Job ID: 93050
-Host: node219
-Date: Sat Mar 14 17:51:47 CET 2026
-
-=== Forward-only profiles (for a,b,c,e) ===
-=== Profiling small ctx=128 mode=forward ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 128,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 49.32340644299984,
-    "stdev": 0.3742766029434547,
-    "all": [
-      49.83634129166603,
-      49.04027655720711,
-      49.13046583533287,
-      49.994274973869324,
-      49.079425632953644,
-      49.33813214302063,
-      49.345266073942184,
-      49.593668431043625,
-      48.94100874662399,
-      48.93520474433899
-    ]
-  },
-  "total_step_ms": {
-    "mean": 49.32340644299984,
-    "stdev": 0.3742766029434547,
-    "all": [
-      49.83634129166603,
-      49.04027655720711,
-      49.13046583533287,
-      49.994274973869324,
-      49.079425632953644,
-      49.33813214302063,
-      49.345266073942184,
-      49.593668431043625,
-      48.94100874662399,
-      48.93520474433899
-    ]
-  }
-}
-Generating '/tmp/nsys-report-b1dc.qdstrm'
-[1/1] [0%                          ] small_ctx128_forward.nsys-rep[1/1] [0%                          ] small_ctx128_forward.nsys-rep[1/1] [=========43%                ] small_ctx128_forward.nsys-rep[1/1] [==================78%       ] small_ctx128_forward.nsys-rep[1/1] [===================82%      ] small_ctx128_forward.nsys-rep[1/1] [====================83%     ] small_ctx128_forward.nsys-rep[1/1] [========================100%] small_ctx128_forward.nsys-rep[1/1] [========================100%] small_ctx128_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx128_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx128_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx128_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx128_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx128_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling small ctx=256 mode=forward ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 256,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 50.93027576804161,
-    "stdev": 0.7133295034248859,
-    "all": [
-      50.80386996269226,
-      50.57895928621292,
-      50.790246576070786,
-      51.09846964478493,
-      50.859179347753525,
-      51.86847224831581,
-      50.34487694501877,
-      50.108879804611206,
-      50.42482912540436,
-      52.424974739551544
-    ]
-  },
-  "total_step_ms": {
-    "mean": 50.93027576804161,
-    "stdev": 0.7133295034248859,
-    "all": [
-      50.80386996269226,
-      50.57895928621292,
-      50.790246576070786,
-      51.09846964478493,
-      50.859179347753525,
-      51.86847224831581,
-      50.34487694501877,
-      50.108879804611206,
-      50.42482912540436,
-      52.424974739551544
-    ]
-  }
-}
-Generating '/tmp/nsys-report-4357.qdstrm'
-[1/1] [0%                          ] small_ctx256_forward.nsys-rep[1/1] [0%                          ] small_ctx256_forward.nsys-rep[1/1] [5%                          ] small_ctx256_forward.nsys-rep[1/1] [=========43%                ] small_ctx256_forward.nsys-rep[1/1] [==================78%       ] small_ctx256_forward.nsys-rep[1/1] [===================82%      ] small_ctx256_forward.nsys-rep[1/1] [====================83%     ] small_ctx256_forward.nsys-rep[1/1] [========================100%] small_ctx256_forward.nsys-rep[1/1] [========================100%] small_ctx256_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx256_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx256_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx256_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx256_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx256_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling small ctx=512 mode=forward ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 512,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 66.33503921329975,
-    "stdev": 0.194766218094967,
-    "all": [
-      65.96018373966217,
-      66.17730483412743,
-      66.50401651859283,
-      66.36877357959747,
-      66.26668572425842,
-      66.29988551139832,
-      66.57566875219345,
-      66.49093702435493,
-      66.18387624621391,
-      66.52306020259857
-    ]
-  },
-  "total_step_ms": {
-    "mean": 66.33503921329975,
-    "stdev": 0.194766218094967,
-    "all": [
-      65.96018373966217,
-      66.17730483412743,
-      66.50401651859283,
-      66.36877357959747,
-      66.26668572425842,
-      66.29988551139832,
-      66.57566875219345,
-      66.49093702435493,
-      66.18387624621391,
-      66.52306020259857
-    ]
-  }
-}
-Generating '/tmp/nsys-report-3447.qdstrm'
-[1/1] [0%                          ] small_ctx512_forward.nsys-rep[1/1] [0%                          ] small_ctx512_forward.nsys-rep[1/1] [=========44%                ] small_ctx512_forward.nsys-rep[1/1] [===================80%      ] small_ctx512_forward.nsys-rep[1/1] [===================82%      ] small_ctx512_forward.nsys-rep[1/1] [====================83%     ] small_ctx512_forward.nsys-rep[1/1] [========================100%] small_ctx512_forward.nsys-rep[1/1] [========================100%] small_ctx512_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx512_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx512_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx512_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx512_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling small ctx=1024 mode=forward ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 1024,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 156.87924101948738,
-    "stdev": 0.206379258764767,
-    "all": [
-      156.80279582738876,
-      156.8073146045208,
-      156.9531410932541,
-      156.97720274329185,
-      157.31318667531013,
-      157.08604454994202,
-      156.7164957523346,
-      156.81476518511772,
-      156.66544437408447,
-      156.65601938962936
-    ]
-  },
-  "total_step_ms": {
-    "mean": 156.87924101948738,
-    "stdev": 0.206379258764767,
-    "all": [
-      156.80279582738876,
-      156.8073146045208,
-      156.9531410932541,
-      156.97720274329185,
-      157.31318667531013,
-      157.08604454994202,
-      156.7164957523346,
-      156.81476518511772,
-      156.66544437408447,
-      156.65601938962936
-    ]
-  }
-}
-Generating '/tmp/nsys-report-1ee8.qdstrm'
-[1/1] [0%                          ] small_ctx1024_forward.nsys-rep[1/1] [0%                          ] small_ctx1024_forward.nsys-rep[1/1] [=========44%                ] small_ctx1024_forward.nsys-rep[1/1] [===================79%      ] small_ctx1024_forward.nsys-rep[1/1] [====================83%     ] small_ctx1024_forward.nsys-rep[1/1] [====================84%     ] small_ctx1024_forward.nsys-rep[1/1] [========================100%] small_ctx1024_forward.nsys-rep[1/1] [========================100%] small_ctx1024_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx1024_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx1024_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx1024_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx1024_forward.sqlite
-         File is older than input file: profiles/nsys/small_ctx1024_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling medium ctx=128 mode=forward ===
-{
-  "config": {
-    "size": "medium",
-    "spec": {
-      "d_model": 1024,
-      "d_ff": 4096,
-      "num_layers": 24,
-      "num_heads": 16
-    },
-    "batch_size": 4,
-    "context_length": 128,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 98.79610762000084,
-    "stdev": 1.2964355528183396,
-    "all": [
-      100.83448886871338,
-      97.74459153413773,
-      100.0913679599762,
-      98.44603016972542,
-      98.80415350198746,
-      99.48421642184258,
-      100.23163631558418,
-      97.44906425476074,
-      97.32212498784065,
-      97.55340218544006
-    ]
-  },
-  "total_step_ms": {
-    "mean": 98.79610762000084,
-    "stdev": 1.2964355528183396,
-    "all": [
-      100.83448886871338,
-      97.74459153413773,
-      100.0913679599762,
-      98.44603016972542,
-      98.80415350198746,
-      99.48421642184258,
-      100.23163631558418,
-      97.44906425476074,
-      97.32212498784065,
-      97.55340218544006
-    ]
-  }
-}
-The target application terminated. One or more process it created re-parented.
-Waiting for termination of re-parented processes.
-Use the `--wait` option to modify this behavior.
-Generating '/tmp/nsys-report-8dae.qdstrm'
-[1/1] [0%                          ] medium_ctx128_forward.nsys-rep[1/1] [0%                          ] medium_ctx128_forward.nsys-rep[1/1] [====26%                     ] medium_ctx128_forward.nsys-rep[1/1] [==========47%               ] medium_ctx128_forward.nsys-rep[1/1] [================68%         ] medium_ctx128_forward.nsys-rep[1/1] [==================78%       ] medium_ctx128_forward.nsys-rep[1/1] [===================80%      ] medium_ctx128_forward.nsys-rep[1/1] [========================100%] medium_ctx128_forward.nsys-rep[1/1] [========================100%] medium_ctx128_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx128_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx128_forward.sqlite
-         File is older than input file: profiles/nsys/medium_ctx128_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx128_forward.sqlite
-         File is older than input file: profiles/nsys/medium_ctx128_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling medium ctx=256 mode=forward ===
-{
-  "config": {
-    "size": "medium",
-    "spec": {
-      "d_model": 1024,
-      "d_ff": 4096,
-      "num_layers": 24,
-      "num_heads": 16
-    },
-    "batch_size": 4,
-    "context_length": 256,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 101.5680767595768,
-    "stdev": 1.3403352708932672,
-    "all": [
-      103.29430550336838,
-      100.84803402423859,
-      101.28424689173698,
-      101.0066345334053,
-      101.18138790130615,
-      101.87937691807747,
-      104.52761873602867,
-      100.75857862830162,
-      100.21061822772026,
-      100.68996623158455
-    ]
-  },
-  "total_step_ms": {
-    "mean": 101.5680767595768,
-    "stdev": 1.3403352708932672,
-    "all": [
-      103.29430550336838,
-      100.84803402423859,
-      101.28424689173698,
-      101.0066345334053,
-      101.18138790130615,
-      101.87937691807747,
-      104.52761873602867,
-      100.75857862830162,
-      100.21061822772026,
-      100.68996623158455
-    ]
-  }
-}
-Generating '/tmp/nsys-report-4e5d.qdstrm'
-[1/1] [0%                          ] medium_ctx256_forward.nsys-rep[1/1] [0%                          ] medium_ctx256_forward.nsys-rep[1/1] [====25%                     ] medium_ctx256_forward.nsys-rep[1/1] [==========47%               ] medium_ctx256_forward.nsys-rep[1/1] [===============67%          ] medium_ctx256_forward.nsys-rep[1/1] [===================79%      ] medium_ctx256_forward.nsys-rep[1/1] [===================80%      ] medium_ctx256_forward.nsys-rep[1/1] [========================100%] medium_ctx256_forward.nsys-rep[1/1] [========================100%] medium_ctx256_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx256_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx256_forward.sqlite
-         File is older than input file: profiles/nsys/medium_ctx256_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx256_forward.sqlite
-         File is older than input file: profiles/nsys/medium_ctx256_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling medium ctx=512 mode=forward ===
-{
-  "config": {
-    "size": "medium",
-    "spec": {
-      "d_model": 1024,
-      "d_ff": 4096,
-      "num_layers": 24,
-      "num_heads": 16
-    },
-    "batch_size": 4,
-    "context_length": 512,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 196.6105293482542,
-    "stdev": 0.3613078606928037,
-    "all": [
-      196.59678637981415,
-      196.17533311247826,
-      196.42680883407593,
-      196.3343508541584,
-      196.5617835521698,
-      196.5491585433483,
-      197.01793044805527,
-      196.94098830223083,
-      196.22455537319183,
-      197.27759808301926
-    ]
-  },
-  "total_step_ms": {
-    "mean": 196.6105293482542,
-    "stdev": 0.3613078606928037,
-    "all": [
-      196.59678637981415,
-      196.17533311247826,
-      196.42680883407593,
-      196.3343508541584,
-      196.5617835521698,
-      196.5491585433483,
-      197.01793044805527,
-      196.94098830223083,
-      196.22455537319183,
-      197.27759808301926
-    ]
-  }
-}
-Generating '/tmp/nsys-report-424c.qdstrm'
-[1/1] [0%                          ] medium_ctx512_forward.nsys-rep[1/1] [0%                          ] medium_ctx512_forward.nsys-rep[1/1] [====27%                     ] medium_ctx512_forward.nsys-rep[1/1] [==========49%               ] medium_ctx512_forward.nsys-rep[1/1] [================71%         ] medium_ctx512_forward.nsys-rep[1/1] [===================79%      ] medium_ctx512_forward.nsys-rep[1/1] [===================81%      ] medium_ctx512_forward.nsys-rep[1/1] [========================100%] medium_ctx512_forward.nsys-rep[1/1] [========================100%] medium_ctx512_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx512_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx512_forward.sqlite
-         File is older than input file: profiles/nsys/medium_ctx512_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx512_forward.sqlite
-         File is older than input file: profiles/nsys/medium_ctx512_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling medium ctx=1024 mode=forward ===
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 288, in <module>
-    main()
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 196, in main
-    run_step(profiled=False)
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 165, in run_step
-    logits = model(x)
-             ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
-    x = layer(x)
-        ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
-    x_attn = self.attn(self.ln1(x))
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
-    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 95, in annotated_scaled_dot_product_attention
-    attention_scores = einsum(Q, K, "... query d_k, ... key d_k -> ... query key") / (d_k ** 0.5)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/einops.py", line 916, in einsum
-    return get_backend(tensors[0]).einsum(pattern, *tensors)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/_backends.py", line 288, in einsum
-    return self.torch.einsum(pattern, *x)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/functional.py", line 407, in einsum
-    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 23.46 GiB of which 122.81 MiB is free. Including non-PyTorch memory, this process has 23.34 GiB memory in use. Of the allocated memory 23.04 GiB is allocated by PyTorch, and 79.53 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-Generating '/tmp/nsys-report-ab59.qdstrm'
-[1/1] [0%                          ] medium_ctx1024_forward.nsys-rep[1/1] [0%                          ] medium_ctx1024_forward.nsys-rep[1/1] [5%                          ] medium_ctx1024_forward.nsys-rep[1/1] [==================77%       ] medium_ctx1024_forward.nsys-rep[1/1] [=======================95%  ] medium_ctx1024_forward.nsys-rep[1/1] [========================100%] medium_ctx1024_forward.nsys-rep[1/1] [========================100%] medium_ctx1024_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx1024_forward.nsys-rep
-WARNING: failed for size=medium, ctx=1024, mode=forward (likely OOM). Continuing.
-=== Profiling large ctx=128 mode=forward ===
-{
-  "config": {
-    "size": "large",
-    "spec": {
-      "d_model": 1280,
-      "d_ff": 5120,
-      "num_layers": 36,
-      "num_heads": 20
-    },
-    "batch_size": 4,
-    "context_length": 128,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 148.54904115200043,
-    "stdev": 2.9004411599107667,
-    "all": [
-      146.8343622982502,
-      147.5316546857357,
-      151.49886533617973,
-      146.17829024791718,
-      147.3529413342476,
-      147.59690314531326,
-      149.69342201948166,
-      146.60822600126266,
-      146.79617434740067,
-      155.39957210421562
-    ]
-  },
-  "total_step_ms": {
-    "mean": 148.54904115200043,
-    "stdev": 2.9004411599107667,
-    "all": [
-      146.8343622982502,
-      147.5316546857357,
-      151.49886533617973,
-      146.17829024791718,
-      147.3529413342476,
-      147.59690314531326,
-      149.69342201948166,
-      146.60822600126266,
-      146.79617434740067,
-      155.39957210421562
-    ]
-  }
-}
-Generating '/tmp/nsys-report-9738.qdstrm'
-[1/1] [0%                          ] large_ctx128_forward.nsys-rep[1/1] [0%                          ] large_ctx128_forward.nsys-rep[1/1] [==19%                       ] large_ctx128_forward.nsys-rep[1/1] [======34%                   ] large_ctx128_forward.nsys-rep[1/1] [==========48%               ] large_ctx128_forward.nsys-rep[1/1] [==============63%           ] large_ctx128_forward.nsys-rep[1/1] [==================77%       ] large_ctx128_forward.nsys-rep[1/1] [===================79%      ] large_ctx128_forward.nsys-rep[1/1] [========================100%] large_ctx128_forward.nsys-rep[1/1] [========================100%] large_ctx128_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx128_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/large_ctx128_forward.sqlite
-         File is older than input file: profiles/nsys/large_ctx128_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/large_ctx128_forward.sqlite
-         File is older than input file: profiles/nsys/large_ctx128_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling large ctx=256 mode=forward ===
-{
-  "config": {
-    "size": "large",
-    "spec": {
-      "d_model": 1280,
-      "d_ff": 5120,
-      "num_layers": 36,
-      "num_heads": 20
-    },
-    "batch_size": 4,
-    "context_length": 256,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 199.17446598410606,
-    "stdev": 0.37013932481215156,
-    "all": [
-      199.0404799580574,
-      199.45484399795532,
-      198.94006475806236,
-      199.0252211689949,
-      199.1679035127163,
-      200.103048235178,
-      199.20900836586952,
-      198.8774947822094,
-      199.0591324865818,
-      198.86746257543564
-    ]
-  },
-  "total_step_ms": {
-    "mean": 199.17446598410606,
-    "stdev": 0.37013932481215156,
-    "all": [
-      199.0404799580574,
-      199.45484399795532,
-      198.94006475806236,
-      199.0252211689949,
-      199.1679035127163,
-      200.103048235178,
-      199.20900836586952,
-      198.8774947822094,
-      199.0591324865818,
-      198.86746257543564
-    ]
-  }
-}
-Generating '/tmp/nsys-report-b26c.qdstrm'
-[1/1] [0%                          ] large_ctx256_forward.nsys-rep[1/1] [0%                          ] large_ctx256_forward.nsys-rep[1/1] [==18%                       ] large_ctx256_forward.nsys-rep[1/1] [======33%                   ] large_ctx256_forward.nsys-rep[1/1] [==========47%               ] large_ctx256_forward.nsys-rep[1/1] [==============61%           ] large_ctx256_forward.nsys-rep[1/1] [==================76%       ] large_ctx256_forward.nsys-rep[1/1] [==================78%       ] large_ctx256_forward.nsys-rep[1/1] [===================79%      ] large_ctx256_forward.nsys-rep[1/1] [========================100%] large_ctx256_forward.nsys-rep[1/1] [========================100%] large_ctx256_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx256_forward.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/large_ctx256_forward.sqlite
-         File is older than input file: profiles/nsys/large_ctx256_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/large_ctx256_forward.sqlite
-         File is older than input file: profiles/nsys/large_ctx256_forward.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling large ctx=512 mode=forward ===
-{
-  "config": {
-    "size": "large",
-    "spec": {
-      "d_model": 1280,
-      "d_ff": 5120,
-      "num_layers": 36,
-      "num_heads": 20
-    },
-    "batch_size": 4,
-    "context_length": 512,
-    "vocab_size": 10000,
-    "mode": "forward",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 422.18458130955696,
-    "stdev": 0.4719240364015448,
-    "all": [
-      421.603225171566,
-      421.60798609256744,
-      421.6560907661915,
-      422.40166291594505,
-      422.18687012791634,
-      422.0709539949894,
-      422.5255250930786,
-      422.10597917437553,
-      422.88361489772797,
-      422.8039048612118
-    ]
-  },
-  "total_step_ms": {
-    "mean": 422.18458130955696,
-    "stdev": 0.4719240364015448,
-    "all": [
-      421.603225171566,
-      421.60798609256744,
-      421.6560907661915,
-      422.40166291594505,
-      422.18687012791634,
-      422.0709539949894,
-      422.5255250930786,
-      422.10597917437553,
-      422.88361489772797,
-      422.8039048612118
-    ]
-  }
-}
-Generating '/tmp/nsys-report-afad.qdstrm'
-[1/1] [0%                          ] large_ctx512_forward.nsys-rep[1/1] [0%                          ] large_ctx512_forward.nsys-rep[1/1] [==19%                       ] large_ctx512_forward.nsys-rep[1/1] [======34%                   ] large_ctx512_forward.nsys-rep[1/1] [==========48%               ] large_ctx512_forward.nsys-rep[1/1] [==============63%           ] large_ctx512_forward.nsys-rep[1/1] [==================77%       ] large_ctx512_forward.nsys-rep[1/1] [==================78%       ] large_ctx512_forward.nsys-rep[1/1] [===================79%      ] large_ctx512_forward.nsys-rep[1/1] [========================100%] large_ctx512_forward.nsys-rep[1/1] [========================100%] large_ctx512_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx512_forward.nsys-rep
-=== Profiling large ctx=1024 mode=forward ===
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 288, in <module>
-    main()
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 196, in main
-    run_step(profiled=False)
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 165, in run_step
-    logits = model(x)
-             ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
-    x = layer(x)
-        ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
-    x_attn = self.attn(self.ln1(x))
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
-    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 99, in annotated_scaled_dot_product_attention
-    attention_weights = softmax(attention_scores, dim=-1)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/nn_utils.py", line 7, in softmax
-    return exponentiated_rescaled_input / torch.sum(exponentiated_rescaled_input, dim=dim, keepdim=True)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 320.00 MiB. GPU 0 has a total capacity of 23.46 GiB of which 314.81 MiB is free. Including non-PyTorch memory, this process has 23.15 GiB memory in use. Of the allocated memory 22.88 GiB is allocated by PyTorch, and 56.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-Generating '/tmp/nsys-report-051e.qdstrm'
-[1/1] [0%                          ] large_ctx1024_forward.nsys-rep[1/1] [0%                          ] large_ctx1024_forward.nsys-rep[1/1] [5%                          ] large_ctx1024_forward.nsys-rep[1/1] [==================78%       ] large_ctx1024_forward.nsys-rep[1/1] [=======================95%  ] large_ctx1024_forward.nsys-rep[1/1] [========================100%] large_ctx1024_forward.nsys-rep[1/1] [========================100%] large_ctx1024_forward.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx1024_forward.nsys-rep
-WARNING: failed for size=large, ctx=1024, mode=forward (likely OOM). Continuing.
-=== Full train-step profiles (for d) ===
-=== Profiling small ctx=128 mode=train_step ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 128,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 50.41999965906143,
-    "stdev": 0.4525980390927083,
-    "all": [
-      50.1289926469326,
-      50.851009786129,
-      49.90105330944061,
-      50.266362726688385,
-      51.42208933830261,
-      49.99114200472832,
-      50.35502463579178,
-      50.29025301337242,
-      50.32496899366379,
-      50.669100135564804
-    ]
-  },
-  "total_step_ms": {
-    "mean": 133.40879753232002,
-    "stdev": 1.3278128383323535,
-    "all": [
-      132.41396844387054,
-      132.76393711566925,
-      132.5281821191311,
-      134.47028398513794,
-      135.08709147572517,
-      131.97238743305206,
-      132.79391080141068,
-      133.48184153437614,
-      135.98376885056496,
-      132.5926035642624
-    ]
-  },
-  "backward_ms": {
-    "mean": 63.988754898309715,
-    "stdev": 1.127072058267726,
-    "all": [
-      63.38624283671379,
-      62.95546889305115,
-      63.711974769830704,
-      65.23439660668373,
-      64.60553780198097,
-      63.08071315288544,
-      63.32847103476524,
-      64.22561407089233,
-      66.37104600667953,
-      62.98808380961418
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 19.000042974948883,
-    "stdev": 0.121994691053392,
-    "all": [
-      18.89873296022415,
-      18.957458436489105,
-      18.91515403985977,
-      18.969524651765823,
-      19.05946433544159,
-      18.90053227543831,
-      19.110415130853653,
-      18.96597445011139,
-      19.287753850221634,
-      18.935419619083405
-    ]
-  }
-}
-Generating '/tmp/nsys-report-213c.qdstrm'
-[1/1] [0%                          ] small_ctx128_train_step.nsys-rep[1/1] [0%                          ] small_ctx128_train_step.nsys-rep[1/1] [0%                          ] small_ctx128_train_step.nsys-rep[1/1] [==19%                       ] small_ctx128_train_step.nsys-rep[1/1] [=======36%                  ] small_ctx128_train_step.nsys-rep[1/1] [===========52%              ] small_ctx128_train_step.nsys-rep[1/1] [================68%         ] small_ctx128_train_step.nsys-rep[1/1] [==================78%       ] small_ctx128_train_step.nsys-rep[1/1] [========================100%] small_ctx128_train_step.nsys-rep[1/1] [========================100%] small_ctx128_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx128_train_step.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx128_train_step.sqlite
-         File is older than input file: profiles/nsys/small_ctx128_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx128_train_step.sqlite
-         File is older than input file: profiles/nsys/small_ctx128_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling small ctx=256 mode=train_step ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 256,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 52.26200744509697,
-    "stdev": 1.3882483783824437,
-    "all": [
-      51.714397966861725,
-      51.718611270189285,
-      51.82337388396263,
-      51.997214555740356,
-      56.112367659807205,
-      51.592666655778885,
-      51.62632465362549,
-      51.519326865673065,
-      51.898423582315445,
-      52.61736735701561
-    ]
-  },
-  "total_step_ms": {
-    "mean": 137.04324699938297,
-    "stdev": 1.61467988758188,
-    "all": [
-      136.04159280657768,
-      136.0892318189144,
-      136.79904118180275,
-      136.60111650824547,
-      141.51399582624435,
-      137.20142468810081,
-      136.46715879440308,
-      136.25220209360123,
-      136.47466897964478,
-      136.99203729629517
-    ]
-  },
-  "backward_ms": {
-    "mean": 65.87525755167007,
-    "stdev": 0.42432474876258125,
-    "all": [
-      65.4706358909607,
-      65.50592556595802,
-      65.99708646535873,
-      65.6726062297821,
-      66.50316342711449,
-      66.71970337629318,
-      65.76314568519592,
-      65.89356809854507,
-      65.67253172397614,
-      65.55420905351639
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 18.90598200261593,
-    "stdev": 0.07575496063726696,
-    "all": [
-      18.856558948755264,
-      18.864694982767105,
-      18.978580832481384,
-      18.931295722723007,
-      18.898464739322662,
-      18.889054656028748,
-      19.077688455581665,
-      18.839307129383087,
-      18.903713673353195,
-      18.82046088576317
-    ]
-  }
-}
-Generating '/tmp/nsys-report-058e.qdstrm'
-[1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [==19%                       ] small_ctx256_train_step.nsys-rep[1/1] [======35%                   ] small_ctx256_train_step.nsys-rep[1/1] [===========51%              ] small_ctx256_train_step.nsys-rep[1/1] [===============67%          ] small_ctx256_train_step.nsys-rep[1/1] [==================78%       ] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx256_train_step.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx256_train_step.sqlite
-         File is older than input file: profiles/nsys/small_ctx256_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx256_train_step.sqlite
-         File is older than input file: profiles/nsys/small_ctx256_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling small ctx=512 mode=train_step ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 512,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 65.54009728133678,
-    "stdev": 0.19215690853589887,
-    "all": [
-      65.27118384838104,
-      65.67040458321571,
-      65.71310386061668,
-      65.58195501565933,
-      65.75706228613853,
-      65.29390439391136,
-      65.32889232039452,
-      65.77722728252411,
-      65.49477204680443,
-      65.51246717572212
-    ]
-  },
-  "total_step_ms": {
-    "mean": 215.60972668230534,
-    "stdev": 0.2374262868363376,
-    "all": [
-      215.19485488533974,
-      215.60445427894592,
-      215.6023196876049,
-      215.91005846858025,
-      215.86783230304718,
-      215.49441292881966,
-      215.35269170999527,
-      215.83424136042595,
-      215.46262502670288,
-      215.7737761735916
-    ]
-  },
-  "backward_ms": {
-    "mean": 130.85707426071167,
-    "stdev": 0.11784219482696363,
-    "all": [
-      130.78779354691505,
-      130.78660890460014,
-      130.6724213063717,
-      130.81752881407738,
-      130.93673810362816,
-      131.0514248907566,
-      130.79649582505226,
-      130.78702986240387,
-      130.93172013759613,
-      131.0029812157154
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 19.21255514025688,
-    "stdev": 0.12525581862135995,
-    "all": [
-      19.13587749004364,
-      19.147440791130066,
-      19.21679452061653,
-      19.510574638843536,
-      19.174031913280487,
-      19.149083644151688,
-      19.227303564548492,
-      19.26998421549797,
-      19.036132842302322,
-      19.258327782154083
-    ]
-  }
-}
-Generating '/tmp/nsys-report-d946.qdstrm'
-[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [==20%                       ] small_ctx512_train_step.nsys-rep[1/1] [=======36%                  ] small_ctx512_train_step.nsys-rep[1/1] [===========53%              ] small_ctx512_train_step.nsys-rep[1/1] [================69%         ] small_ctx512_train_step.nsys-rep[1/1] [==================78%       ] small_ctx512_train_step.nsys-rep[1/1] [===================79%      ] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_train_step.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx512_train_step.sqlite
-         File is older than input file: profiles/nsys/small_ctx512_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/small_ctx512_train_step.sqlite
-         File is older than input file: profiles/nsys/small_ctx512_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling small ctx=1024 mode=train_step ===
-{
-  "config": {
-    "size": "small",
-    "spec": {
-      "d_model": 768,
-      "d_ff": 3072,
-      "num_layers": 12,
-      "num_heads": 12
-    },
-    "batch_size": 4,
-    "context_length": 1024,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 156.8945661187172,
-    "stdev": 0.2136015312338037,
-    "all": [
-      157.0824459195137,
-      156.37019276618958,
-      156.9119654595852,
-      156.88729286193848,
-      156.9424457848072,
-      157.06272795796394,
-      156.71371296048164,
-      157.06662088632584,
-      156.95811435580254,
-      156.95014223456383
-    ]
-  },
-  "total_step_ms": {
-    "mean": 494.6475077420473,
-    "stdev": 0.3230100430768157,
-    "all": [
-      494.43089216947556,
-      494.38651278615,
-      494.3542368710041,
-      494.85958740115166,
-      494.9795566499233,
-      494.50811743736267,
-      494.22137066721916,
-      495.2334612607956,
-      494.6582391858101,
-      494.84310299158096
-    ]
-  },
-  "backward_ms": {
-    "mean": 318.58389154076576,
-    "stdev": 0.2598984601719412,
-    "all": [
-      318.2912543416023,
-      318.8122510910034,
-      318.2443045079708,
-      318.4664808213711,
-      318.90686228871346,
-      318.422295153141,
-      318.4821605682373,
-      319.01608780026436,
-      318.6793439090252,
-      318.51787492632866
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 19.169050082564354,
-    "stdev": 0.16199103518987942,
-    "all": [
-      19.057191908359528,
-      19.204068928956985,
-      19.197966903448105,
-      19.505813717842102,
-      19.130248576402664,
-      19.023094326257706,
-      19.025497138500214,
-      19.1507525742054,
-      19.02078092098236,
-      19.375085830688477
-    ]
-  }
-}
-Generating '/tmp/nsys-report-c19f.qdstrm'
-[1/1] [0%                          ] small_ctx1024_train_step.nsys-rep[1/1] [0%                          ] small_ctx1024_train_step.nsys-rep[1/1] [==20%                       ] small_ctx1024_train_step.nsys-rep[1/1] [=======36%                  ] small_ctx1024_train_step.nsys-rep[1/1] [===========52%              ] small_ctx1024_train_step.nsys-rep[1/1] [================68%         ] small_ctx1024_train_step.nsys-rep[1/1] [==================78%       ] small_ctx1024_train_step.nsys-rep[1/1] [===================79%      ] small_ctx1024_train_step.nsys-rep[1/1] [========================100%] small_ctx1024_train_step.nsys-rep[1/1] [========================100%] small_ctx1024_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx1024_train_step.nsys-rep
-=== Profiling medium ctx=128 mode=train_step ===
-{
-  "config": {
-    "size": "medium",
-    "spec": {
-      "d_model": 1024,
-      "d_ff": 4096,
-      "num_layers": 24,
-      "num_heads": 16
-    },
-    "batch_size": 4,
-    "context_length": 128,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 100.90271346271038,
-    "stdev": 0.6338313890076103,
-    "all": [
-      101.61712765693665,
-      100.62811523675919,
-      100.9722463786602,
-      101.67698562145233,
-      100.4839725792408,
-      100.40551796555519,
-      100.6435938179493,
-      100.73213651776314,
-      99.95779767632484,
-      101.90964117646217
-    ]
-  },
-  "total_step_ms": {
-    "mean": 287.19513677060604,
-    "stdev": 1.2627775823854677,
-    "all": [
-      288.3048914372921,
-      286.8374027311802,
-      285.81617027521133,
-      288.1506346166134,
-      287.0500795543194,
-      287.10830956697464,
-      286.2948440015316,
-      288.2171720266342,
-      285.05247458815575,
-      289.1193889081478
-    ]
-  },
-  "backward_ms": {
-    "mean": 126.62104554474354,
-    "stdev": 0.8696955811556707,
-    "all": [
-      126.97102874517441,
-      126.59624963998795,
-      125.19004568457603,
-      126.38088315725327,
-      126.97197496891022,
-      127.10900977253914,
-      126.04305893182755,
-      127.83388420939445,
-      125.46072900295258,
-      127.6535913348198
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 59.67137776315212,
-    "stdev": 0.15434507125833663,
-    "all": [
-      59.716735035181046,
-      59.61303785443306,
-      59.6538782119751,
-      60.09276583790779,
-      59.594132006168365,
-      59.59378182888031,
-      59.60819125175476,
-      59.65115129947662,
-      59.633947908878326,
-      59.556156396865845
-    ]
-  }
-}
-Generating '/tmp/nsys-report-2dc2.qdstrm'
-[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [11%                         ] medium_ctx128_train_step.nsys-rep[1/1] [==20%                       ] medium_ctx128_train_step.nsys-rep[1/1] [=====29%                    ] medium_ctx128_train_step.nsys-rep[1/1] [=======38%                  ] medium_ctx128_train_step.nsys-rep[1/1] [=========46%                ] medium_ctx128_train_step.nsys-rep[1/1] [============55%             ] medium_ctx128_train_step.nsys-rep[1/1] [==============64%           ] medium_ctx128_train_step.nsys-rep[1/1] [=================73%        ] medium_ctx128_train_step.nsys-rep[1/1] [==================76%       ] medium_ctx128_train_step.nsys-rep[1/1] [==================77%       ] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx128_train_step.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx128_train_step.sqlite
-         File is older than input file: profiles/nsys/medium_ctx128_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx128_train_step.sqlite
-         File is older than input file: profiles/nsys/medium_ctx128_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling medium ctx=256 mode=train_step ===
-{
-  "config": {
-    "size": "medium",
-    "spec": {
-      "d_model": 1024,
-      "d_ff": 4096,
-      "num_layers": 24,
-      "num_heads": 16
-    },
-    "batch_size": 4,
-    "context_length": 256,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 101.40210092067719,
-    "stdev": 1.3231556073743171,
-    "all": [
-      100.47004371881485,
-      103.50935161113739,
-      100.48625990748405,
-      101.09299048781395,
-      102.55340486764908,
-      102.89974510669708,
-      99.93451833724976,
-      100.36724805831909,
-      100.18854588270187,
-      102.51890122890472
-    ]
-  },
-  "total_step_ms": {
-    "mean": 349.792842194438,
-    "stdev": 1.3358597236523275,
-    "all": [
-      349.1062894463539,
-      351.98989510536194,
-      348.67049381136894,
-      349.4991101324558,
-      350.61825066804886,
-      350.8792147040367,
-      348.4411910176277,
-      348.87678548693657,
-      348.3656272292137,
-      351.4815643429756
-    ]
-  },
-  "backward_ms": {
-    "mean": 188.35194408893585,
-    "stdev": 0.33267399271803544,
-    "all": [
-      188.5952241718769,
-      188.47300484776497,
-      188.36696445941925,
-      188.04695829749107,
-      187.84337490797043,
-      187.9347451031208,
-      188.61424922943115,
-      188.5141246020794,
-      188.24133276939392,
-      188.88946250081062
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 60.03879718482494,
-    "stdev": 0.15677467223738378,
-    "all": [
-      60.041021555662155,
-      60.00753864645958,
-      59.81726944446564,
-      60.3591613471508,
-      60.22147089242935,
-      60.044724494218826,
-      59.89242345094681,
-      59.995412826538086,
-      59.93574857711792,
-      60.07320061326027
-    ]
-  }
-}
-Generating '/tmp/nsys-report-bb32.qdstrm'
-[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [11%                         ] medium_ctx256_train_step.nsys-rep[1/1] [==19%                       ] medium_ctx256_train_step.nsys-rep[1/1] [====28%                     ] medium_ctx256_train_step.nsys-rep[1/1] [=======37%                  ] medium_ctx256_train_step.nsys-rep[1/1] [=========45%                ] medium_ctx256_train_step.nsys-rep[1/1] [============54%             ] medium_ctx256_train_step.nsys-rep[1/1] [==============62%           ] medium_ctx256_train_step.nsys-rep[1/1] [================71%         ] medium_ctx256_train_step.nsys-rep[1/1] [==================76%       ] medium_ctx256_train_step.nsys-rep[1/1] [==================77%       ] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx256_train_step.nsys-rep
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx256_train_step.sqlite
-         File is older than input file: profiles/nsys/medium_ctx256_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-
-WARNING: Existing SQLite export found: profiles/nsys/medium_ctx256_train_step.sqlite
-         File is older than input file: profiles/nsys/medium_ctx256_train_step.nsys-rep
-         Use --force-export=true to update export file.
-
-usage: nsys stats [<args>] <input-file>
-Try 'nsys stats --help' for more information.
-=== Profiling medium ctx=512 mode=train_step ===
-{
-  "config": {
-    "size": "medium",
-    "spec": {
-      "d_model": 1024,
-      "d_ff": 4096,
-      "num_layers": 24,
-      "num_heads": 16
-    },
-    "batch_size": 4,
-    "context_length": 512,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 195.42233422398567,
-    "stdev": 1.2058466556827758,
-    "all": [
-      195.74163854122162,
-      195.75020298361778,
-      195.2052004635334,
-      195.77017799019814,
-      195.70188224315643,
-      195.72056457400322,
-      192.08039715886116,
-      196.19540125131607,
-      195.88787481188774,
-      196.17000222206116
-    ]
-  },
-  "total_step_ms": {
-    "mean": 653.500459343195,
-    "stdev": 1.6683969987718439,
-    "all": [
-      652.5500752031803,
-      652.9808044433594,
-      651.7598628997803,
-      653.7273824214935,
-      653.8779027760029,
-      654.3121747672558,
-      650.3337919712067,
-      654.7952741384506,
-      654.447503387928,
-      656.2198214232922
-    ]
-  },
-  "backward_ms": {
-    "mean": 398.58844727277756,
-    "stdev": 1.0175982933665138,
-    "all": [
-      397.36753329634666,
-      397.63811230659485,
-      397.1347101032734,
-      398.2212655246258,
-      398.73193204402924,
-      399.11968261003494,
-      398.8587372004986,
-      399.1069309413433,
-      399.206317961216,
-      400.49925073981285
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 59.48967784643173,
-    "stdev": 0.11165020840451251,
-    "all": [
-      59.44090336561203,
-      59.592489153146744,
-      59.41995233297348,
-      59.73593890666962,
-      59.444088488817215,
-      59.47192758321762,
-      59.394657611846924,
-      59.492941945791245,
-      59.353310614824295,
-      59.55056846141815
-    ]
-  }
-}
-Generating '/tmp/nsys-report-3086.qdstrm'
-[1/1] [0%                          ] medium_ctx512_train_step.nsys-rep[1/1] [0%                          ] medium_ctx512_train_step.nsys-rep[1/1] [0%                          ] medium_ctx512_train_step.nsys-rep[1/1] [11%                         ] medium_ctx512_train_step.nsys-rep[1/1] [==19%                       ] medium_ctx512_train_step.nsys-rep[1/1] [====28%                     ] medium_ctx512_train_step.nsys-rep[1/1] [=======36%                  ] medium_ctx512_train_step.nsys-rep[1/1] [=========45%                ] medium_ctx512_train_step.nsys-rep[1/1] [===========53%              ] medium_ctx512_train_step.nsys-rep[1/1] [==============62%           ] medium_ctx512_train_step.nsys-rep[1/1] [================70%         ] medium_ctx512_train_step.nsys-rep[1/1] [==================76%       ] medium_ctx512_train_step.nsys-rep[1/1] [========================100%] medium_ctx512_train_step.nsys-rep[1/1] [========================100%] medium_ctx512_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx512_train_step.nsys-rep
-=== Profiling medium ctx=1024 mode=train_step ===
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 288, in <module>
-    main()
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 196, in main
-    run_step(profiled=False)
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 165, in run_step
-    logits = model(x)
-             ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
-    x = layer(x)
-        ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
-    x_attn = self.attn(self.ln1(x))
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
-    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 95, in annotated_scaled_dot_product_attention
-    attention_scores = einsum(Q, K, "... query d_k, ... key d_k -> ... query key") / (d_k ** 0.5)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/einops.py", line 916, in einsum
-    return get_backend(tensors[0]).einsum(pattern, *tensors)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/_backends.py", line 288, in einsum
-    return self.torch.einsum(pattern, *x)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/functional.py", line 407, in einsum
-    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 23.46 GiB of which 122.81 MiB is free. Including non-PyTorch memory, this process has 23.34 GiB memory in use. Of the allocated memory 23.04 GiB is allocated by PyTorch, and 79.53 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-Generating '/tmp/nsys-report-cf3b.qdstrm'
-[1/1] [0%                          ] medium_ctx1024_train_step.nsys-rep[1/1] [0%                          ] medium_ctx1024_train_step.nsys-rep[1/1] [5%                          ] medium_ctx1024_train_step.nsys-rep[1/1] [==================77%       ] medium_ctx1024_train_step.nsys-rep[1/1] [=======================95%  ] medium_ctx1024_train_step.nsys-rep[1/1] [========================100%] medium_ctx1024_train_step.nsys-rep[1/1] [========================100%] medium_ctx1024_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx1024_train_step.nsys-rep
-WARNING: failed for size=medium, ctx=1024, mode=train_step (likely OOM). Continuing.
-=== Profiling large ctx=128 mode=train_step ===
-{
-  "config": {
-    "size": "large",
-    "spec": {
-      "d_model": 1280,
-      "d_ff": 5120,
-      "num_layers": 36,
-      "num_heads": 20
-    },
-    "batch_size": 4,
-    "context_length": 128,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 143.27666349709034,
-    "stdev": 3.0981153722217085,
-    "all": [
-      146.4448682963848,
-      147.78677374124527,
-      140.70967957377434,
-      140.0507390499115,
-      143.70954036712646,
-      141.35990664362907,
-      140.64007624983788,
-      145.58005705475807,
-      146.62549644708633,
-      139.85949754714966
-    ]
-  },
-  "total_step_ms": {
-    "mean": 490.7156962901354,
-    "stdev": 3.2503915174501903,
-    "all": [
-      493.8030205667019,
-      494.8333390057087,
-      488.1288670003414,
-      486.98312789201736,
-      491.7350076138973,
-      488.7237176299095,
-      487.70711570978165,
-      494.1100552678108,
-      493.9092807471752,
-      487.22343146800995
-    ]
-  },
-  "backward_ms": {
-    "mean": 212.92911395430565,
-    "stdev": 0.43516600158569446,
-    "all": [
-      212.7363346517086,
-      212.37996593117714,
-      212.87981048226357,
-      212.4692127108574,
-      213.57431262731552,
-      212.8184586763382,
-      212.88340911269188,
-      213.7710228562355,
-      212.82199025154114,
-      212.95662224292755
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 134.5099188387394,
-    "stdev": 0.15852412823648912,
-    "all": [
-      134.62181761860847,
-      134.66659933328629,
-      134.5393769443035,
-      134.46317613124847,
-      134.45115461945534,
-      134.54535230994225,
-      134.1836303472519,
-      134.75897535681725,
-      134.46179404854774,
-      134.40731167793274
-    ]
-  }
-}
-Generating '/tmp/nsys-report-73aa.qdstrm'
-[1/1] [0%                          ] large_ctx128_train_step.nsys-rep[1/1] [0%                          ] large_ctx128_train_step.nsys-rep[1/1] [0%                          ] large_ctx128_train_step.nsys-rep[1/1] [7%                          ] large_ctx128_train_step.nsys-rep[1/1] [14%                         ] large_ctx128_train_step.nsys-rep[1/1] [==20%                       ] large_ctx128_train_step.nsys-rep[1/1] [====25%                     ] large_ctx128_train_step.nsys-rep[1/1] [=====31%                    ] large_ctx128_train_step.nsys-rep[1/1] [=======37%                  ] large_ctx128_train_step.nsys-rep[1/1] [=========43%                ] large_ctx128_train_step.nsys-rep[1/1] [==========49%               ] large_ctx128_train_step.nsys-rep[1/1] [============55%             ] large_ctx128_train_step.nsys-rep[1/1] [==============61%           ] large_ctx128_train_step.nsys-rep[1/1] [===============67%          ] large_ctx128_train_step.nsys-rep[1/1] [=================73%        ] large_ctx128_train_step.nsys-rep[1/1] [==================76%       ] large_ctx128_train_step.nsys-rep[1/1] [==================77%       ] large_ctx128_train_step.nsys-rep[1/1] [========================100%] large_ctx128_train_step.nsys-rep[1/1] [========================100%] large_ctx128_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx128_train_step.nsys-rep
-=== Profiling large ctx=256 mode=train_step ===
-{
-  "config": {
-    "size": "large",
-    "spec": {
-      "d_model": 1280,
-      "d_ff": 5120,
-      "num_layers": 36,
-      "num_heads": 20
-    },
-    "batch_size": 4,
-    "context_length": 256,
-    "vocab_size": 10000,
-    "mode": "train_step",
-    "loss": "cross_entropy",
-    "warmup_steps": 5,
-    "measure_steps": 10,
-    "device": "cuda",
-    "dtype": "float32",
-    "amp": "none",
-    "annotate_attention": true,
-    "memory_profile": false
-  },
-  "forward_ms": {
-    "mean": 198.03631380200386,
-    "stdev": 0.6607268715974471,
-    "all": [
-      197.23738357424736,
-      198.08686524629593,
-      198.38684797286987,
-      198.3259841799736,
-      197.18044251203537,
-      197.08844274282455,
-      198.93501698970795,
-      198.20569828152657,
-      198.0990245938301,
-      198.8174319267273
-    ]
-  },
-  "total_step_ms": {
-    "mean": 743.99250485003,
-    "stdev": 1.236205852771229,
-    "all": [
-      742.3562481999397,
-      743.2853914797306,
-      743.8584826886654,
-      743.4818893671036,
-      743.6202690005302,
-      742.6214851438999,
-      745.348509401083,
-      745.4746216535568,
-      743.8317947089672,
-      746.046356856823
-    ]
-  },
-  "backward_ms": {
-    "mean": 411.31526939570904,
-    "stdev": 0.8244392497375147,
-    "all": [
-      410.5186052620411,
-      410.4947857558727,
-      410.9283611178398,
-      410.50389781594276,
-      411.72895580530167,
-      410.8736999332905,
-      411.84786707162857,
-      412.6557409763336,
-      411.06415539979935,
-      412.5366248190403
-    ]
-  },
-  "optimizer_step_ms": {
-    "mean": 134.64092165231705,
-    "stdev": 0.0580569723801057,
-    "all": [
-      134.60025936365128,
-      134.70374047756195,
-      134.5432735979557,
-      134.6520073711872,
-      134.7108706831932,
-      134.65934246778488,
-      134.56562533974648,
-      134.61318239569664,
-      134.66861471533775,
-      134.69230011105537
-    ]
-  }
-}
-Generating '/tmp/nsys-report-8cfb.qdstrm'
-[1/1] [0%                          ] large_ctx256_train_step.nsys-rep[1/1] [0%                          ] large_ctx256_train_step.nsys-rep[1/1] [0%                          ] large_ctx256_train_step.nsys-rep[1/1] [7%                          ] large_ctx256_train_step.nsys-rep[1/1] [12%                         ] large_ctx256_train_step.nsys-rep[1/1] [==18%                       ] large_ctx256_train_step.nsys-rep[1/1] [===23%                      ] large_ctx256_train_step.nsys-rep[1/1] [=====29%                    ] large_ctx256_train_step.nsys-rep[1/1] [======34%                   ] large_ctx256_train_step.nsys-rep[1/1] [=======39%                  ] large_ctx256_train_step.nsys-rep[1/1] [=========45%                ] large_ctx256_train_step.nsys-rep[1/1] [===========50%              ] large_ctx256_train_step.nsys-rep[1/1] [============55%             ] large_ctx256_train_step.nsys-rep[1/1] [==============61%           ] large_ctx256_train_step.nsys-rep[1/1] [===============66%          ] large_ctx256_train_step.nsys-rep[1/1] [================71%         ] large_ctx256_train_step.nsys-rep[1/1] [==================75%       ] large_ctx256_train_step.nsys-rep[1/1] [========================100%] large_ctx256_train_step.nsys-rep[1/1] [========================100%] large_ctx256_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx256_train_step.nsys-rep
-=== Profiling large ctx=512 mode=train_step ===
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 288, in <module>
-    main()
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 196, in main
-    run_step(profiled=False)
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 165, in run_step
-    logits = model(x)
-             ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
-    x = layer(x)
-        ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
-    x_attn = self.attn(self.ln1(x))
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 490, in forward
-    Q = self.q_proj(x)
-        ^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 41, in forward
-    return einsum(x, self.weight, "... d_in, d_out d_in -> ... d_out")
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/einops.py", line 916, in einsum
-    return get_backend(tensors[0]).einsum(pattern, *tensors)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/einops/_backends.py", line 288, in einsum
-    return self.torch.einsum(pattern, *x)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/functional.py", line 407, in einsum
-    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 10.00 MiB. GPU 0 has a total capacity of 23.46 GiB of which 18.81 MiB is free. Including non-PyTorch memory, this process has 23.44 GiB memory in use. Of the allocated memory 23.03 GiB is allocated by PyTorch, and 182.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-Generating '/tmp/nsys-report-633b.qdstrm'
-[1/1] [0%                          ] large_ctx512_train_step.nsys-rep[1/1] [0%                          ] large_ctx512_train_step.nsys-rep[1/1] [=========44%                ] large_ctx512_train_step.nsys-rep[1/1] [===================79%      ] large_ctx512_train_step.nsys-rep[1/1] [=====================86%    ] large_ctx512_train_step.nsys-rep[1/1] [========================100%] large_ctx512_train_step.nsys-rep[1/1] [========================100%] large_ctx512_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx512_train_step.nsys-rep
-WARNING: failed for size=large, ctx=512, mode=train_step (likely OOM). Continuing.
-=== Profiling large ctx=1024 mode=train_step ===
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 288, in <module>
-    main()
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 196, in main
-    run_step(profiled=False)
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 165, in run_step
-    logits = model(x)
-             ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 247, in forward
-    x = layer(x)
-        ^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 380, in forward
-    x_attn = self.attn(self.ln1(x))
-             ^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/model.py", line 516, in forward
-    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336_systems/benchmark.py", line 99, in annotated_scaled_dot_product_attention
-    attention_weights = softmax(attention_scores, dim=-1)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/var/scratch/dpp2567/cs336-assignment2-systems/cs336-basics/cs336_basics/nn_utils.py", line 7, in softmax
-    return exponentiated_rescaled_input / torch.sum(exponentiated_rescaled_input, dim=dim, keepdim=True)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 320.00 MiB. GPU 0 has a total capacity of 23.46 GiB of which 314.81 MiB is free. Including non-PyTorch memory, this process has 23.15 GiB memory in use. Of the allocated memory 22.88 GiB is allocated by PyTorch, and 56.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-Generating '/tmp/nsys-report-29b0.qdstrm'
-[1/1] [0%                          ] large_ctx1024_train_step.nsys-rep[1/1] [0%                          ] large_ctx1024_train_step.nsys-rep[1/1] [5%                          ] large_ctx1024_train_step.nsys-rep[1/1] [==================78%       ] large_ctx1024_train_step.nsys-rep[1/1] [=======================95%  ] large_ctx1024_train_step.nsys-rep[1/1] [========================100%] large_ctx1024_train_step.nsys-rep[1/1] [========================100%] large_ctx1024_train_step.nsys-rep
-Generated:
-    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/large_ctx1024_train_step.nsys-rep
-WARNING: failed for size=large, ctx=1024, mode=train_step (likely OOM). Continuing.
-=== Done ===
-Sat Mar 14 18:02:13 CET 2026
