@@ -26,8 +26,10 @@ mkdir -p profiles/ddp
 
 uv run python -m cs336_systems.naive_ddp_benchmark \
   --world-size 2 \
-  --batch-size-global 4 \
+  --model-size large \
+  --batch-size-global 2 \
   --context-length 128 \
   --warmup-steps 3 \
   --measure-steps 10 \
-  > profiles/ddp/naive_ddp_benchmark_xl_2gpu.json
+  --optimizer adamw \
+  > profiles/ddp/naive_ddp_benchmark_large_2gpu.json
