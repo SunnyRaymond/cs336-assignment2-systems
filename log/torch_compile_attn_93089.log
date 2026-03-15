@@ -2,3 +2,142 @@ Running attention benchmark with torch.compile optimizations...
 {"batch_size": 8, "seq_len": 256, "d_model": 16, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2.0, "forward_mean_ms": 0.2735771983861923, "forward_stdev_ms": 0.005731095261387736, "memory_before_backward_mean_mb": 21.14892578125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 0.7593002915382385, "backward_stdev_ms": 0.00806223650922446}
 {"batch_size": 8, "seq_len": 1024, "d_model": 16, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 32.0, "forward_mean_ms": 0.9212262183427811, "forward_stdev_ms": 0.0027293653934966594, "memory_before_backward_mean_mb": 83.84423828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 2.3651979118585587, "backward_stdev_ms": 0.05508409610983517}
 {"batch_size": 8, "seq_len": 4096, "d_model": 16, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 512.0, "forward_mean_ms": 11.395086795091629, "forward_stdev_ms": 0.039305677654301555, "memory_before_backward_mean_mb": 1054.62548828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 38.5698277503252, "backward_stdev_ms": 0.09579868083120062}
+{"batch_size": 8, "seq_len": 8192, "d_model": 16, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2048.0, "forward_mean_ms": 49.7500167042017, "forward_stdev_ms": 0.04645465401781045, "memory_before_backward_mean_mb": 4141.00048828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 163.9853446930647, "backward_stdev_ms": 0.11181714003519176}
+{"batch_size": 8, "seq_len": 16384, "d_model": 16, "dtype": "float32", "implementation": "uncompiled", "status": "oom", "attention_scores_tensor_mb": 8192.0, "error_stage": "cuda_oom", "error_message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.20 GiB is free. Including non-PyTorch memory, this process has 16.26 GiB memory in use. Of the allocated memory 16.04 GiB is allocated by PyTorch, and 15.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"}
+{"batch_size": 8, "seq_len": 256, "d_model": 32, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2.0, "forward_mean_ms": 0.27412332594394684, "forward_stdev_ms": 0.008653213736715331, "memory_before_backward_mean_mb": 22.02392578125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 0.7607637345790863, "backward_stdev_ms": 0.008169827039363515}
+{"batch_size": 8, "seq_len": 1024, "d_model": 32, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 32.0, "forward_mean_ms": 0.8682065084576607, "forward_stdev_ms": 0.0032646164865678343, "memory_before_backward_mean_mb": 87.34423828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 2.3842724040150642, "backward_stdev_ms": 0.049058237961220184}
+{"batch_size": 8, "seq_len": 4096, "d_model": 32, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 512.0, "forward_mean_ms": 11.551918312907219, "forward_stdev_ms": 0.03729442624252413, "memory_before_backward_mean_mb": 1068.62548828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 38.93528286367655, "backward_stdev_ms": 0.12679691087357425}
+{"batch_size": 8, "seq_len": 8192, "d_model": 32, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2048.0, "forward_mean_ms": 50.49195908010006, "forward_stdev_ms": 0.04926479530027273, "memory_before_backward_mean_mb": 4169.00048828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 165.60937263071537, "backward_stdev_ms": 0.11435683282767357}
+{"batch_size": 8, "seq_len": 16384, "d_model": 32, "dtype": "float32", "implementation": "uncompiled", "status": "oom", "attention_scores_tensor_mb": 8192.0, "error_stage": "cuda_oom", "error_message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.18 GiB is free. Including non-PyTorch memory, this process has 16.28 GiB memory in use. Of the allocated memory 16.06 GiB is allocated by PyTorch, and 11.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"}
+{"batch_size": 8, "seq_len": 256, "d_model": 64, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2.0, "forward_mean_ms": 0.27116432785987854, "forward_stdev_ms": 0.0069783060997302805, "memory_before_backward_mean_mb": 23.77392578125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 0.7597820088267326, "backward_stdev_ms": 0.007434164975144719}
+{"batch_size": 8, "seq_len": 1024, "d_model": 64, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 32.0, "forward_mean_ms": 0.9034790843725204, "forward_stdev_ms": 0.0030704250887950446, "memory_before_backward_mean_mb": 94.34423828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 2.4651451408863068, "backward_stdev_ms": 0.0564049564165664}
+{"batch_size": 8, "seq_len": 4096, "d_model": 64, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 512.0, "forward_mean_ms": 12.327545657753944, "forward_stdev_ms": 0.04905721158708849, "memory_before_backward_mean_mb": 1096.62548828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 40.53137548267841, "backward_stdev_ms": 0.11194647878250856}
+{"batch_size": 8, "seq_len": 8192, "d_model": 64, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2048.0, "forward_mean_ms": 53.661036379635334, "forward_stdev_ms": 0.05768898926632474, "memory_before_backward_mean_mb": 4225.00048828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 172.33460690826178, "backward_stdev_ms": 0.19329259783055577}
+{"batch_size": 8, "seq_len": 16384, "d_model": 64, "dtype": "float32", "implementation": "uncompiled", "status": "oom", "attention_scores_tensor_mb": 8192.0, "error_stage": "cuda_oom", "error_message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.13 GiB is free. Including non-PyTorch memory, this process has 16.33 GiB memory in use. Of the allocated memory 16.11 GiB is allocated by PyTorch, and 23.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"}
+{"batch_size": 8, "seq_len": 256, "d_model": 128, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2.0, "forward_mean_ms": 0.2650696784257889, "forward_stdev_ms": 0.009102716955327652, "memory_before_backward_mean_mb": 27.27392578125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 0.7571547105908394, "backward_stdev_ms": 0.007940032738211773}
+{"batch_size": 8, "seq_len": 1024, "d_model": 128, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 32.0, "forward_mean_ms": 1.004219762980938, "forward_stdev_ms": 0.006148131185847786, "memory_before_backward_mean_mb": 108.34423828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 2.709188722074032, "backward_stdev_ms": 0.07182112894165558}
+{"batch_size": 8, "seq_len": 4096, "d_model": 128, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 512.0, "forward_mean_ms": 14.464035332202911, "forward_stdev_ms": 0.04328503382128714, "memory_before_backward_mean_mb": 1152.62548828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 47.130371518433094, "backward_stdev_ms": 0.15803496562907224}
+{"batch_size": 8, "seq_len": 8192, "d_model": 128, "dtype": "float32", "implementation": "uncompiled", "status": "ok", "attention_scores_tensor_mb": 2048.0, "forward_mean_ms": 69.39743023365736, "forward_stdev_ms": 0.25478941746565764, "memory_before_backward_mean_mb": 4337.00048828125, "memory_before_backward_stdev_mb": 0.0, "backward_mean_ms": 213.20241063833237, "backward_stdev_ms": 0.3846810332996443}
+{"batch_size": 8, "seq_len": 16384, "d_model": 128, "dtype": "float32", "implementation": "uncompiled", "status": "oom", "attention_scores_tensor_mb": 8192.0, "error_stage": "cuda_oom", "error_message": "CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.03 GiB is free. Including non-PyTorch memory, this process has 16.43 GiB memory in use. Of the allocated memory 16.20 GiB is allocated by PyTorch, and 27.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"}
+In file included from /tmp/tmpwes166ie/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 256, "d_model": 16, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmp0qta2i5t/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 1024, "d_model": 16, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 32.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmplpxm53ey/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 4096, "d_model": 16, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 512.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpxlcvbv68/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 8192, "d_model": 16, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2048.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpj5zkf41n/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 16384, "d_model": 16, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 8192.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpcjtphjv4/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 256, "d_model": 32, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpc9qab9s_/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 1024, "d_model": 32, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 32.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmph6_f0oph/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 4096, "d_model": 32, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 512.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpebrnndyl/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 8192, "d_model": 32, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2048.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpa2joys8a/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 16384, "d_model": 32, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 8192.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmp7u7cbuhe/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 256, "d_model": 64, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpqfemyth0/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 1024, "d_model": 64, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 32.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmp6l_9sn86/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 4096, "d_model": 64, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 512.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmp3syjesln/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 8192, "d_model": 64, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2048.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpy02f92of/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 16384, "d_model": 64, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 8192.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmp5vo1ffwg/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 256, "d_model": 128, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmptsg859ft/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 1024, "d_model": 128, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 32.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmpaw6_2hnl/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 4096, "d_model": 128, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 512.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmp8v7i_fax/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 8192, "d_model": 128, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 2048.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+In file included from /tmp/tmp14am8a4f/main.c:1:
+/var/scratch/dpp2567/.venvs/cs336-assignment2-systems/lib/python3.12/site-packages/triton/backends/nvidia/include/cuda.h:56:10: fatal error: stdlib.h: No such file or directory
+   56 | #include <stdlib.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+{"batch_size": 8, "seq_len": 16384, "d_model": 128, "dtype": "float32", "implementation": "compiled", "status": "compile_error", "attention_scores_tensor_mb": 8192.0, "error_stage": "compile_error", "error_message": "backend='inductor' raised:"}
+Wrote CSV: profiles/attention/attention_benchmark_compile.csv
+Wrote JSON: profiles/attention/attention_benchmark_compile.json

@@ -1,0 +1,3 @@
+Running full model benchmark with torch.compile optimizations...
+Using torch.compile backend=aot_eager (inductor/triton toolchain unavailable on this cluster).
+=== vanilla size=small mode=forward ===

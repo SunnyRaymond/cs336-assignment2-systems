@@ -1,0 +1,41 @@
+batch_size,seq_len,d_model,dtype,implementation,status,attention_scores_tensor_mb,memory_before_backward_mean_mb,memory_before_backward_stdev_mb,forward_mean_ms,forward_stdev_ms,backward_mean_ms,backward_stdev_ms,error_stage,error_message
+8,256,16,float32,uncompiled,ok,2.0,21.14892578125,0.0,0.2735771983861923,0.005731095261387736,0.7593002915382385,0.00806223650922446,,
+8,1024,16,float32,uncompiled,ok,32.0,83.84423828125,0.0,0.9212262183427811,0.0027293653934966594,2.3651979118585587,0.05508409610983517,,
+8,4096,16,float32,uncompiled,ok,512.0,1054.62548828125,0.0,11.395086795091629,0.039305677654301555,38.5698277503252,0.09579868083120062,,
+8,8192,16,float32,uncompiled,ok,2048.0,4141.00048828125,0.0,49.7500167042017,0.04645465401781045,163.9853446930647,0.11181714003519176,,
+8,16384,16,float32,uncompiled,oom,8192.0,,,,,,,cuda_oom,"CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.20 GiB is free. Including non-PyTorch memory, this process has 16.26 GiB memory in use. Of the allocated memory 16.04 GiB is allocated by PyTorch, and 15.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+8,256,32,float32,uncompiled,ok,2.0,22.02392578125,0.0,0.27412332594394684,0.008653213736715331,0.7607637345790863,0.008169827039363515,,
+8,1024,32,float32,uncompiled,ok,32.0,87.34423828125,0.0,0.8682065084576607,0.0032646164865678343,2.3842724040150642,0.049058237961220184,,
+8,4096,32,float32,uncompiled,ok,512.0,1068.62548828125,0.0,11.551918312907219,0.03729442624252413,38.93528286367655,0.12679691087357425,,
+8,8192,32,float32,uncompiled,ok,2048.0,4169.00048828125,0.0,50.49195908010006,0.04926479530027273,165.60937263071537,0.11435683282767357,,
+8,16384,32,float32,uncompiled,oom,8192.0,,,,,,,cuda_oom,"CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.18 GiB is free. Including non-PyTorch memory, this process has 16.28 GiB memory in use. Of the allocated memory 16.06 GiB is allocated by PyTorch, and 11.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+8,256,64,float32,uncompiled,ok,2.0,23.77392578125,0.0,0.27116432785987854,0.0069783060997302805,0.7597820088267326,0.007434164975144719,,
+8,1024,64,float32,uncompiled,ok,32.0,94.34423828125,0.0,0.9034790843725204,0.0030704250887950446,2.4651451408863068,0.0564049564165664,,
+8,4096,64,float32,uncompiled,ok,512.0,1096.62548828125,0.0,12.327545657753944,0.04905721158708849,40.53137548267841,0.11194647878250856,,
+8,8192,64,float32,uncompiled,ok,2048.0,4225.00048828125,0.0,53.661036379635334,0.05768898926632474,172.33460690826178,0.19329259783055577,,
+8,16384,64,float32,uncompiled,oom,8192.0,,,,,,,cuda_oom,"CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.13 GiB is free. Including non-PyTorch memory, this process has 16.33 GiB memory in use. Of the allocated memory 16.11 GiB is allocated by PyTorch, and 23.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+8,256,128,float32,uncompiled,ok,2.0,27.27392578125,0.0,0.2650696784257889,0.009102716955327652,0.7571547105908394,0.007940032738211773,,
+8,1024,128,float32,uncompiled,ok,32.0,108.34423828125,0.0,1.004219762980938,0.006148131185847786,2.709188722074032,0.07182112894165558,,
+8,4096,128,float32,uncompiled,ok,512.0,1152.62548828125,0.0,14.464035332202911,0.04328503382128714,47.130371518433094,0.15803496562907224,,
+8,8192,128,float32,uncompiled,ok,2048.0,4337.00048828125,0.0,69.39743023365736,0.25478941746565764,213.20241063833237,0.3846810332996443,,
+8,16384,128,float32,uncompiled,oom,8192.0,,,,,,,cuda_oom,"CUDA out of memory. Tried to allocate 8.00 GiB. GPU 0 has a total capacity of 23.46 GiB of which 7.03 GiB is free. Including non-PyTorch memory, this process has 16.43 GiB memory in use. Of the allocated memory 16.20 GiB is allocated by PyTorch, and 27.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+8,256,16,float32,compiled,compile_error,2.0,,,,,,,compile_error,backend='inductor' raised:
+8,1024,16,float32,compiled,compile_error,32.0,,,,,,,compile_error,backend='inductor' raised:
+8,4096,16,float32,compiled,compile_error,512.0,,,,,,,compile_error,backend='inductor' raised:
+8,8192,16,float32,compiled,compile_error,2048.0,,,,,,,compile_error,backend='inductor' raised:
+8,16384,16,float32,compiled,compile_error,8192.0,,,,,,,compile_error,backend='inductor' raised:
+8,256,32,float32,compiled,compile_error,2.0,,,,,,,compile_error,backend='inductor' raised:
+8,1024,32,float32,compiled,compile_error,32.0,,,,,,,compile_error,backend='inductor' raised:
+8,4096,32,float32,compiled,compile_error,512.0,,,,,,,compile_error,backend='inductor' raised:
+8,8192,32,float32,compiled,compile_error,2048.0,,,,,,,compile_error,backend='inductor' raised:
+8,16384,32,float32,compiled,compile_error,8192.0,,,,,,,compile_error,backend='inductor' raised:
+8,256,64,float32,compiled,compile_error,2.0,,,,,,,compile_error,backend='inductor' raised:
+8,1024,64,float32,compiled,compile_error,32.0,,,,,,,compile_error,backend='inductor' raised:
+8,4096,64,float32,compiled,compile_error,512.0,,,,,,,compile_error,backend='inductor' raised:
+8,8192,64,float32,compiled,compile_error,2048.0,,,,,,,compile_error,backend='inductor' raised:
+8,16384,64,float32,compiled,compile_error,8192.0,,,,,,,compile_error,backend='inductor' raised:
+8,256,128,float32,compiled,compile_error,2.0,,,,,,,compile_error,backend='inductor' raised:
+8,1024,128,float32,compiled,compile_error,32.0,,,,,,,compile_error,backend='inductor' raised:
+8,4096,128,float32,compiled,compile_error,512.0,,,,,,,compile_error,backend='inductor' raised:
+8,8192,128,float32,compiled,compile_error,2048.0,,,,,,,compile_error,backend='inductor' raised:
+8,16384,128,float32,compiled,compile_error,8192.0,,,,,,,compile_error,backend='inductor' raised:
