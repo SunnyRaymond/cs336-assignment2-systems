@@ -12,25 +12,28 @@ import torch.multiprocessing as mp
 import torch.nn.functional as F
 from cs336_basics.model import BasicsTransformerLM
 
-from .ddp import (
-    allreduce_flattened_parameter_grads,
-    allreduce_individual_parameter_grads,
-    broadcast_module_parameters,
-)
+from .ddp import allreduce_flattened_parameter_grads, allreduce_individual_parameter_grads, broadcast_module_parameters
 
 
-XL_SPEC = {"d_model": 1600, "d_ff": 6400, "num_layers": 48, "num_heads": 25}
+MODEL_SPECS = {
+    "small": {"d_model": 768, "d_ff": 3072, "num_layers": 12, "num_heads": 12},
+    "medium": {"d_model": 1024, "d_ff": 4096, "num_layers": 24, "num_heads": 16},
+    "large": {"d_model": 1280, "d_ff": 5120, "num_layers": 36, "num_heads": 20},
+    "xl": {"d_model": 1600, "d_ff": 6400, "num_layers": 48, "num_heads": 25},
+}
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Benchmark minimal DDP: individual vs flattened all-reduce.")
     parser.add_argument("--world-size", type=int, default=2)
     parser.add_argument("--batch-size-global", type=int, default=4)
+    parser.add_argument("--model-size", choices=list(MODEL_SPECS.keys()), default="xl")
     parser.add_argument("--context-length", type=int, default=128)
     parser.add_argument("--vocab-size", type=int, default=10_000)
     parser.add_argument("--warmup-steps", type=int, default=3)
     parser.add_argument("--measure-steps", type=int, default=10)
     parser.add_argument("--lr", type=float, default=1e-3)
+    parser.add_argument("--optimizer", choices=["adamw", "sgd"], default="adamw")
     parser.add_argument("--master-addr", default="127.0.0.1")
     parser.add_argument("--master-port", default="29540")
     return parser.parse_args()
@@ -109,14 +112,15 @@ def _worker(rank: int, args: argparse.Namespace):
     device = torch.device(f"cuda:{rank}")
     dist.init_process_group(backend="nccl", rank=rank, world_size=args.world_size)
 
+    spec = MODEL_SPECS[args.model_size]
     torch.manual_seed(42)
     base_model = BasicsTransformerLM(
         vocab_size=args.vocab_size,
         context_length=args.context_length,
-        d_model=XL_SPEC["d_model"],
-        num_layers=XL_SPEC["num_layers"],
-        num_heads=XL_SPEC["num_heads"],
-        d_ff=XL_SPEC["d_ff"],
+        d_model=spec["d_model"],
+        num_layers=spec["num_layers"],
+        num_heads=spec["num_heads"],
+        d_ff=spec["d_ff"],
         rope_theta=10_000.0,
     ).to(device)
     broadcast_module_parameters(base_model, src=0)
@@ -129,14 +133,17 @@ def _worker(rank: int, args: argparse.Namespace):
         model = BasicsTransformerLM(
             vocab_size=args.vocab_size,
             context_length=args.context_length,
-            d_model=XL_SPEC["d_model"],
-            num_layers=XL_SPEC["num_layers"],
-            num_heads=XL_SPEC["num_heads"],
-            d_ff=XL_SPEC["d_ff"],
+            d_model=spec["d_model"],
+            num_layers=spec["num_layers"],
+            num_heads=spec["num_heads"],
+            d_ff=spec["d_ff"],
             rope_theta=10_000.0,
         ).to(device)
         model.load_state_dict(base_state, strict=True)
-        optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
+        if args.optimizer == "adamw":
+            optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
+        else:
+            optimizer = torch.optim.SGD(model.parameters(), lr=args.lr)
         results_by_mode[mode] = _bench_one_mode(model, optimizer, local_bs, args, device, mode)
 
     gathered = [None for _ in range(args.world_size)]
@@ -151,12 +158,13 @@ def _worker(rank: int, args: argparse.Namespace):
             "setup": {
                 "world_size": args.world_size,
                 "backend": "nccl",
-                "model_size": "xl",
+                "model_size": args.model_size,
                 "batch_size_global": args.batch_size_global,
                 "context_length": args.context_length,
                 "vocab_size": args.vocab_size,
                 "warmup_steps": args.warmup_steps,
                 "measure_steps": args.measure_steps,
+                "optimizer": args.optimizer,
             },
             "individual_allreduce": {
                 "time_per_step_ms": _avg("time_per_step_ms", "individual"),
@@ -182,4 +190,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
