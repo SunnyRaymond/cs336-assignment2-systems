@@ -1,0 +1,37 @@
+{
+  "setup": {
+    "world_size": 2,
+    "backend": "nccl",
+    "model_size": "large",
+    "batch_size_global": 2,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "warmup_steps": 3,
+    "measure_steps": 10,
+    "optimizer": "adamw",
+    "method": "naive_ddp_individual_gradient_allreduce_after_backward"
+  },
+  "result": {
+    "time_per_step_ms": 1732.1829557418823,
+    "time_in_gradient_communication_ms": 1208.8934564962983,
+    "communication_fraction_percent": 69.79017182257394
+  },
+  "per_rank": [
+    {
+      "rank": 0,
+      "total_step_ms_mean": 1732.169121131301,
+      "total_step_ms_stdev": 6.591408240552219,
+      "comm_ms_mean": 1209.459413215518,
+      "comm_ms_stdev": 2.54384364220238,
+      "comm_fraction_percent": 69.8234022567961
+    },
+    {
+      "rank": 1,
+      "total_step_ms_mean": 1732.1967903524637,
+      "total_step_ms_stdev": 5.793025481556452,
+      "comm_ms_mean": 1208.3274997770786,
+      "comm_ms_stdev": 1.2234405934128525,
+      "comm_fraction_percent": 69.75694138835176
+    }
+  ]
+}
