@@ -26,7 +26,7 @@ mkdir -p profiles/ddp
 
 uv run python -m cs336_systems.minimal_ddp_flat_benchmark \
   --world-size 2 \
-  --model-size large \
+  --model-size small \
   --batch-size-global 2 \
   --context-length 128 \
   --warmup-steps 3 \
