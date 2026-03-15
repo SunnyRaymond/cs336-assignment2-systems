@@ -1,0 +1,79 @@
+{
+  "setup": {
+    "world_size": 2,
+    "model_size": "large",
+    "batch_size_global": 2,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "warmup_steps": 2,
+    "measure_steps": 5
+  },
+  "non_sharded": {
+    "memory_after_init_mb": 3698.0439453125,
+    "memory_before_optimizer_step_peak_mb": 14813.21728515625,
+    "memory_after_optimizer_step_peak_mb": 14813.21728515625,
+    "time_per_iteration_ms_mean": 521.4658632874489,
+    "optimizer_state_bytes_estimate": 7755294720.0,
+    "param_bytes": 3877647360.0
+  },
+  "sharded": {
+    "memory_after_init_mb": 3714.2939453125,
+    "memory_before_optimizer_step_peak_mb": 11115.20458984375,
+    "memory_after_optimizer_step_peak_mb": 11115.20458984375,
+    "time_per_iteration_ms_mean": 1031.638665497303,
+    "optimizer_state_bytes_estimate": 3877647360.0,
+    "param_bytes": 3877647360.0
+  },
+  "per_rank": [
+    {
+      "rank": 0,
+      "non_sharded": {
+        "mode": "non_sharded",
+        "param_bytes": 3877647360,
+        "optimizer_state_bytes_estimate": 7755294720,
+        "memory_after_init_mb": 3698.0439453125,
+        "memory_after_init_reserved_mb": 3702.0,
+        "memory_before_optimizer_step_peak_mb": 14813.21728515625,
+        "memory_after_optimizer_step_peak_mb": 14813.21728515625,
+        "time_per_iteration_ms_mean": 519.5683851838112,
+        "time_per_iteration_ms_stdev": 2.581823961095685
+      },
+      "sharded": {
+        "mode": "sharded",
+        "param_bytes": 3877647360,
+        "optimizer_state_bytes_estimate": 3980042240,
+        "memory_after_init_mb": 3714.2939453125,
+        "memory_after_init_reserved_mb": 3742.0,
+        "memory_before_optimizer_step_peak_mb": 11212.85595703125,
+        "memory_after_optimizer_step_peak_mb": 11212.85595703125,
+        "time_per_iteration_ms_mean": 1031.6420748829842,
+        "time_per_iteration_ms_stdev": 1.0974442691766497
+      }
+    },
+    {
+      "rank": 1,
+      "non_sharded": {
+        "mode": "non_sharded",
+        "param_bytes": 3877647360,
+        "optimizer_state_bytes_estimate": 7755294720,
+        "memory_after_init_mb": 3698.0439453125,
+        "memory_after_init_reserved_mb": 3702.0,
+        "memory_before_optimizer_step_peak_mb": 14813.21728515625,
+        "memory_after_optimizer_step_peak_mb": 14813.21728515625,
+        "time_per_iteration_ms_mean": 523.3633413910866,
+        "time_per_iteration_ms_stdev": 4.40153056318344
+      },
+      "sharded": {
+        "mode": "sharded",
+        "param_bytes": 3877647360,
+        "optimizer_state_bytes_estimate": 3775252480,
+        "memory_after_init_mb": 3714.2939453125,
+        "memory_after_init_reserved_mb": 3742.0,
+        "memory_before_optimizer_step_peak_mb": 11017.55322265625,
+        "memory_after_optimizer_step_peak_mb": 11017.55322265625,
+        "time_per_iteration_ms_mean": 1031.6352561116219,
+        "time_per_iteration_ms_stdev": 0.9604874736418909
+      }
+    }
+  ]
+}
