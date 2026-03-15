@@ -5,6 +5,7 @@ from collections.abc import Iterable
 import torch
 import torch.distributed as dist
 import torch.nn as nn
+from torch._utils import _flatten_dense_tensors, _unflatten_dense_tensors
 
 
 def broadcast_module_parameters(module: nn.Module, src: int = 0) -> None:
@@ -20,6 +21,29 @@ def allreduce_individual_parameter_grads(module: nn.Module, div_world_size: bool
         dist.all_reduce(p.grad, op=dist.ReduceOp.SUM)
         if div_world_size:
             p.grad.div_(world_size)
+
+
+def allreduce_flattened_parameter_grads(module: nn.Module, div_world_size: bool = True) -> None:
+    world_size = dist.get_world_size()
+    grads: list[torch.Tensor] = []
+    params: list[nn.Parameter] = []
+    for p in module.parameters():
+        if p.grad is None:
+            continue
+        grads.append(p.grad)
+        params.append(p)
+
+    if not grads:
+        return
+
+    flat = _flatten_dense_tensors(grads)
+    dist.all_reduce(flat, op=dist.ReduceOp.SUM)
+    if div_world_size:
+        flat.div_(world_size)
+
+    synced = _unflatten_dense_tensors(flat, grads)
+    for p, g_synced in zip(params, synced):
+        p.grad.copy_(g_synced)
 
 
 class DistributedDataParallelIndividualParameters(nn.Module):
@@ -75,4 +99,3 @@ class DistributedDataParallelIndividualParameters(nn.Module):
 
     def parameters(self, recurse: bool = True) -> Iterable[nn.Parameter]:  # type: ignore[override]
         return self.module.parameters(recurse=recurse)
-
