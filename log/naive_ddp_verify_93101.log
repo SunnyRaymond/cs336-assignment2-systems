@@ -1,0 +1,25 @@
+Using CPython 3.12.13
+Creating virtual environment at: .venv
+Downloading wandb (21.2MiB)
+Downloading nvidia-cudnn-cu12 (634.0MiB)
+Downloading pandas (11.4MiB)
+Downloading nvidia-cusparse-cu12 (197.8MiB)
+Downloading nvidia-cusparselt-cu12 (143.1MiB)
+Downloading nvidia-cufft-cu12 (201.7MiB)
+Downloading torch (731.1MiB)
+Downloading nvidia-nccl-cu12 (179.9MiB)
+Downloading nvidia-cusolver-cu12 (122.0MiB)
+Downloading nvidia-cublas-cu12 (346.6MiB)
+Downloading triton (241.4MiB)
+ Downloaded wandb
+ Downloaded nvidia-cusolver-cu12
+ Downloaded nvidia-cusparselt-cu12
+  × Failed to download `pandas==2.3.1`
+  ├─▶ Failed to extract archive:
+  │   pandas-2.3.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+  ├─▶ I/O operation failed during extraction
+  ╰─▶ failed to create file
+      `/home/dpp2567/.cache/uv/.tmpDZQoFf/pandas/tests/window/test_online.py`:
+      Disk quota exceeded (os error 122)
+  help: `pandas` (v2.3.1) was included because `cs336-systems` (v1.0.5)
+        depends on `pandas`
