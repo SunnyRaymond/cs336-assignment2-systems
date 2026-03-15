@@ -1,9 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=torch_compile_attn
-#SBATCH --partition=fatq
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=16
-#SBATCH --mem=64G
 #SBATCH --time=1-00:00:00
 #SBATCH --output=log/%x_%j.log
 #SBATCH --error=log/%x_%j.log
