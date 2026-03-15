@@ -729,3 +729,281 @@ Generating '/tmp/nsys-report-18e3.qdstrm'
 [1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [0%                          ] small_ctx256_train_step.nsys-rep[1/1] [5%                          ] small_ctx256_train_step.nsys-rep[1/1] [==19%                       ] small_ctx256_train_step.nsys-rep[1/1] [======35%                   ] small_ctx256_train_step.nsys-rep[1/1] [===========51%              ] small_ctx256_train_step.nsys-rep[1/1] [===============67%          ] small_ctx256_train_step.nsys-rep[1/1] [==================78%       ] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep[1/1] [========================100%] small_ctx256_train_step.nsys-rep
 Generated:
     /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx256_train_step.nsys-rep
+=== Profiling small ctx=512 mode=train_step ===
+{
+  "config": {
+    "size": "small",
+    "spec": {
+      "d_model": 768,
+      "d_ff": 3072,
+      "num_layers": 12,
+      "num_heads": 12
+    },
+    "batch_size": 4,
+    "context_length": 512,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 64.77285549044609,
+    "stdev": 0.298343269988949,
+    "all": [
+      65.44115394353867,
+      64.37749788165092,
+      64.88262116909027,
+      64.59580734372139,
+      64.9857148528099,
+      64.59074094891548,
+      64.51526284217834,
+      64.70530852675438,
+      64.79053199291229,
+      64.84391540288925
+    ]
+  },
+  "total_step_ms": {
+    "mean": 212.759767472744,
+    "stdev": 0.3913301983383233,
+    "all": [
+      213.21186423301697,
+      212.1272161602974,
+      212.653286755085,
+      212.84244582057,
+      213.34870159626007,
+      212.43209764361382,
+      212.385393679142,
+      213.1483629345894,
+      212.78603002429008,
+      212.66227588057518
+    ]
+  },
+  "backward_ms": {
+    "mean": 129.6278789639473,
+    "stdev": 0.1539945335853899,
+    "all": [
+      129.5030452311039,
+      129.4841393828392,
+      129.47938591241837,
+      129.66043502092361,
+      129.92962822318077,
+      129.5701079070568,
+      129.61160019040108,
+      129.8319660127163,
+      129.69548255205154,
+      129.5129992067814
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 18.3590330183506,
+    "stdev": 0.13601691808259875,
+    "all": [
+      18.267665058374405,
+      18.265578895807266,
+      18.291279673576355,
+      18.586203455924988,
+      18.433358520269394,
+      18.271248787641525,
+      18.258530646562576,
+      18.611088395118713,
+      18.300015479326248,
+      18.30536127090454
+    ]
+  }
+}
+Generating '/tmp/nsys-report-d723.qdstrm'
+[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [0%                          ] small_ctx512_train_step.nsys-rep[1/1] [5%                          ] small_ctx512_train_step.nsys-rep[1/1] [==20%                       ] small_ctx512_train_step.nsys-rep[1/1] [=======36%                  ] small_ctx512_train_step.nsys-rep[1/1] [===========53%              ] small_ctx512_train_step.nsys-rep[1/1] [================69%         ] small_ctx512_train_step.nsys-rep[1/1] [==================78%       ] small_ctx512_train_step.nsys-rep[1/1] [===================79%      ] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep[1/1] [========================100%] small_ctx512_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/small_ctx512_train_step.nsys-rep
+=== Profiling medium ctx=128 mode=train_step ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 128,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 90.99618420004845,
+    "stdev": 2.6856196223914166,
+    "all": [
+      93.42977777123451,
+      89.73293006420135,
+      89.74342793226242,
+      89.61391821503639,
+      90.41665866971016,
+      89.70541879534721,
+      89.6437019109726,
+      89.3309898674488,
+      90.48926085233688,
+      97.85575792193413
+    ]
+  },
+  "total_step_ms": {
+    "mean": 272.1591491252184,
+    "stdev": 5.450137786409296,
+    "all": [
+      266.8288052082062,
+      271.7616967856884,
+      263.8070099055767,
+      271.05650305747986,
+      271.16361260414124,
+      280.40122240781784,
+      269.5270664989948,
+      276.2385793030262,
+      270.19545808434486,
+      280.6115373969078
+    ]
+  },
+  "backward_ms": {
+    "mean": 122.07303643226624,
+    "stdev": 5.06624360466426,
+    "all": [
+      114.5261637866497,
+      122.86968901753426,
+      115.10645225644112,
+      122.06890806555748,
+      121.69205769896507,
+      131.47157430648804,
+      120.98615989089012,
+      127.68818438053131,
+      120.80522999167442,
+      123.51594492793083
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 59.08992849290371,
+    "stdev": 0.1768226204571323,
+    "all": [
+      58.87286365032196,
+      59.15907770395279,
+      58.95712971687317,
+      59.373676776885986,
+      59.054896235466,
+      59.22422930598259,
+      58.89720469713211,
+      59.21940505504608,
+      58.90096724033356,
+      59.23983454704285
+    ]
+  }
+}
+Generating '/tmp/nsys-report-aeb1.qdstrm'
+[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [5%                          ] medium_ctx128_train_step.nsys-rep[1/1] [6%                          ] medium_ctx128_train_step.nsys-rep[1/1] [0%                          ] medium_ctx128_train_step.nsys-rep[1/1] [11%                         ] medium_ctx128_train_step.nsys-rep[1/1] [==20%                       ] medium_ctx128_train_step.nsys-rep[1/1] [=====29%                    ] medium_ctx128_train_step.nsys-rep[1/1] [=======37%                  ] medium_ctx128_train_step.nsys-rep[1/1] [=========46%                ] medium_ctx128_train_step.nsys-rep[1/1] [============55%             ] medium_ctx128_train_step.nsys-rep[1/1] [==============64%           ] medium_ctx128_train_step.nsys-rep[1/1] [=================73%        ] medium_ctx128_train_step.nsys-rep[1/1] [==================76%       ] medium_ctx128_train_step.nsys-rep[1/1] [==================77%       ] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep[1/1] [========================100%] medium_ctx128_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx128_train_step.nsys-rep
+=== Profiling medium ctx=256 mode=train_step ===
+{
+  "config": {
+    "size": "medium",
+    "spec": {
+      "d_model": 1024,
+      "d_ff": 4096,
+      "num_layers": 24,
+      "num_heads": 16
+    },
+    "batch_size": 4,
+    "context_length": 256,
+    "vocab_size": 10000,
+    "mode": "train_step",
+    "loss": "cross_entropy",
+    "warmup_steps": 5,
+    "measure_steps": 10,
+    "device": "cuda",
+    "dtype": "float32",
+    "amp": "none",
+    "annotate_attention": true,
+    "memory_profile": false
+  },
+  "forward_ms": {
+    "mean": 94.94605176150799,
+    "stdev": 3.0424243655896537,
+    "all": [
+      93.11388060450554,
+      93.06737408041954,
+      93.11393275856972,
+      93.19417923688889,
+      99.61048141121864,
+      96.36030346155167,
+      93.35453808307648,
+      93.07920560240746,
+      93.45613792538643,
+      101.11048445105553
+    ]
+  },
+  "total_step_ms": {
+    "mean": 340.6833779066801,
+    "stdev": 3.261430308285213,
+    "all": [
+      337.9933573305607,
+      338.850524276495,
+      338.48486095666885,
+      339.5329937338829,
+      345.2339470386505,
+      342.38026663661003,
+      338.90045434236526,
+      338.99766206741333,
+      338.9635197818279,
+      347.4961929023266
+    ]
+  },
+  "backward_ms": {
+    "mean": 186.682191491127,
+    "stdev": 0.2562180098694062,
+    "all": [
+      186.12097948789597,
+      186.60276383161545,
+      186.57252192497253,
+      186.97025626897812,
+      186.51527538895607,
+      186.86461076140404,
+      186.75728887319565,
+      186.74758449196815,
+      186.6670846939087,
+      187.00354918837547
+    ]
+  },
+  "optimizer_step_ms": {
+    "mean": 59.055134654045105,
+    "stdev": 0.2399549803996332,
+    "all": [
+      58.75849723815918,
+      59.18038636445999,
+      58.7984062731266,
+      59.3685582280159,
+      59.1081902384758,
+      59.15535241365433,
+      58.78862738609314,
+      59.17087197303772,
+      58.840297162532806,
+      59.382159262895584
+    ]
+  }
+}
+Generating '/tmp/nsys-report-32a0.qdstrm'
+[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [5%                          ] medium_ctx256_train_step.nsys-rep[1/1] [0%                          ] medium_ctx256_train_step.nsys-rep[1/1] [10%                         ] medium_ctx256_train_step.nsys-rep[1/1] [==19%                       ] medium_ctx256_train_step.nsys-rep[1/1] [====28%                     ] medium_ctx256_train_step.nsys-rep[1/1] [=======36%                  ] medium_ctx256_train_step.nsys-rep[1/1] [=========45%                ] medium_ctx256_train_step.nsys-rep[1/1] [===========53%              ] medium_ctx256_train_step.nsys-rep[1/1] [==============62%           ] medium_ctx256_train_step.nsys-rep[1/1] [================70%         ] medium_ctx256_train_step.nsys-rep[1/1] [==================76%       ] medium_ctx256_train_step.nsys-rep[1/1] [==================77%       ] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep[1/1] [========================100%] medium_ctx256_train_step.nsys-rep
+Generated:
+    /var/scratch/dpp2567/cs336-assignment2-systems/profiles/nsys/medium_ctx256_train_step.nsys-rep
+=== Done ===
+Sun Mar 15 03:55:40 CET 2026
