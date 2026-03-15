@@ -1,9 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=naive_ddp_verify
-#SBATCH --partition=fatq
 #SBATCH --gres=gpu:2
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=32G
 #SBATCH --time=1-00:10:00
 #SBATCH --output=log/%x_%j.log
 #SBATCH --error=log/%x_%j.log
