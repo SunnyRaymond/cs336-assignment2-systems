@@ -20,6 +20,7 @@ conda activate base
 mkdir -p profiles/compile_model
 
 echo "Running full model benchmark with torch.compile optimizations..."
+echo "Using torch.compile backend=aot_eager (inductor/triton toolchain unavailable on this cluster)."
 
 # 1.3(b): compare vanilla vs compiled full model.
 # Keep to sizes likely to fit on constrained GPUs.
@@ -47,6 +48,7 @@ for s in "${SIZES[@]}"; do
       --mode "${m}" \
       --device cuda \
       --compile-model \
+      --compile-backend aot_eager \
       > "profiles/compile_model/${s}_${m}_compiled.json"
   done
 done

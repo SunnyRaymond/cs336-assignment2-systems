@@ -20,6 +20,7 @@ conda activate base
 mkdir -p profiles/attention
 
 echo "Running attention benchmark with torch.compile optimizations..."
+echo "Using torch.compile backend=aot_eager (inductor/triton toolchain unavailable on this cluster)."
 
 # 1.3(a): compare uncompiled vs compiled attention under the same sweep config.
 uv run python -m cs336_systems.benchmark_attention \
@@ -32,5 +33,6 @@ uv run python -m cs336_systems.benchmark_attention \
   --device cuda \
   --dtype float32 \
   --implementations uncompiled compiled \
+  --compile-backend aot_eager \
   --csv-out profiles/attention/attention_benchmark_compile.csv \
   --json-out profiles/attention/attention_benchmark_compile.json
