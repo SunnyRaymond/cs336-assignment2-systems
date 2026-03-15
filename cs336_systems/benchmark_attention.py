@@ -34,6 +34,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--dtype", choices=["float32", "float16", "bfloat16"], default="float32")
     parser.add_argument("--causal", action="store_true")
+    parser.add_argument(
+        "--implementations",
+        nargs="+",
+        choices=["uncompiled", "compiled"],
+        default=["uncompiled", "compiled"],
+        help="Which attention implementations to benchmark.",
+    )
+    parser.add_argument("--compile-mode", default="default")
+    parser.add_argument("--compile-backend", default="inductor")
     parser.add_argument("--csv-out", default="profiles/attention/attention_benchmark.csv")
     parser.add_argument("--json-out", default="profiles/attention/attention_benchmark.json")
     return parser.parse_args()
@@ -49,12 +58,16 @@ def benchmark_one(
     forward_steps: int,
     backward_steps: int,
     causal: bool,
+    implementation: str,
+    compile_mode: str,
+    compile_backend: str,
 ) -> dict:
     result = {
         "batch_size": batch_size,
         "seq_len": seq_len,
         "d_model": d_model,
         "dtype": str(dtype).replace("torch.", ""),
+        "implementation": implementation,
         "status": "ok",
     }
 
@@ -65,6 +78,12 @@ def benchmark_one(
     mask = make_causal_mask(seq_len, device=device) if causal else None
 
     try:
+        def attn_fn(q: torch.Tensor, k: torch.Tensor, v: torch.Tensor, m: torch.Tensor | None):
+            return scaled_dot_product_attention(Q=q, K=k, V=v, mask=m)
+
+        if implementation == "compiled":
+            attn_fn = torch.compile(attn_fn, mode=compile_mode, backend=compile_backend)
+
         # Forward benchmark uses no grad.
         q_fwd = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype)
         k_fwd = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype)
@@ -72,14 +91,14 @@ def benchmark_one(
 
         for _ in range(warmup_steps):
             with torch.no_grad():
-                _ = scaled_dot_product_attention(Q=q_fwd, K=k_fwd, V=v_fwd, mask=mask)
+                _ = attn_fn(q_fwd, k_fwd, v_fwd, mask)
             synchronize_if_cuda(device)
 
         forward_times = []
         for _ in range(forward_steps):
             start = default_timer()
             with torch.no_grad():
-                _ = scaled_dot_product_attention(Q=q_fwd, K=k_fwd, V=v_fwd, mask=mask)
+                _ = attn_fn(q_fwd, k_fwd, v_fwd, mask)
             synchronize_if_cuda(device)
             forward_times.append(default_timer() - start)
 
@@ -91,7 +110,7 @@ def benchmark_one(
             q = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype, requires_grad=True)
             k = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype, requires_grad=True)
             v = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype, requires_grad=True)
-            o = scaled_dot_product_attention(Q=q, K=k, V=v, mask=mask)
+            o = attn_fn(q, k, v, mask)
             loss = o.sum()
             loss.backward()
             synchronize_if_cuda(device)
@@ -103,7 +122,7 @@ def benchmark_one(
             q = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype, requires_grad=True)
             k = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype, requires_grad=True)
             v = torch.randn(batch_size, seq_len, d_model, device=device, dtype=dtype, requires_grad=True)
-            o = scaled_dot_product_attention(Q=q, K=k, V=v, mask=mask)
+            o = attn_fn(q, k, v, mask)
             loss = o.sum()
 
             if device.startswith("cuda"):
@@ -135,6 +154,10 @@ def benchmark_one(
             result["error_message"] = str(e).split("\n")[0]
             if device.startswith("cuda"):
                 torch.cuda.empty_cache()
+        elif "torch.compile" in str(e).lower() or "inductor" in str(e).lower():
+            result["status"] = "compile_error"
+            result["error_stage"] = "compile_error"
+            result["error_message"] = str(e).split("\n")[0]
         else:
             raise
 
@@ -150,7 +173,7 @@ def main() -> None:
         torch.cuda.empty_cache()
 
     all_results = []
-    for d_model, seq_len in itertools.product(args.dmodels, args.seq_lens):
+    for impl, d_model, seq_len in itertools.product(args.implementations, args.dmodels, args.seq_lens):
         row = benchmark_one(
             batch_size=args.batch_size,
             seq_len=seq_len,
@@ -161,6 +184,9 @@ def main() -> None:
             forward_steps=args.forward_steps,
             backward_steps=args.backward_steps,
             causal=args.causal,
+            implementation=impl,
+            compile_mode=args.compile_mode,
+            compile_backend=args.compile_backend,
         )
         all_results.append(row)
         print(json.dumps(row))
@@ -173,6 +199,7 @@ def main() -> None:
         "seq_len",
         "d_model",
         "dtype",
+        "implementation",
         "status",
         "attention_scores_tensor_mb",
         "memory_before_backward_mean_mb",

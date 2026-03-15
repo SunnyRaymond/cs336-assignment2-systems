@@ -56,6 +56,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--weight-decay", type=float, default=0.01)
+    parser.add_argument("--compile-model", action="store_true", help="Compile the full model with torch.compile.")
+    parser.add_argument("--compile-mode", default="default")
+    parser.add_argument("--compile-backend", default="inductor")
     parser.add_argument(
         "--annotate-attention",
         action="store_true",
@@ -123,6 +126,8 @@ def main() -> None:
         d_ff=spec["d_ff"],
         rope_theta=args.rope_theta,
     ).to(device=device, dtype=dtype)
+    if args.compile_model:
+        model = torch.compile(model, mode=args.compile_mode, backend=args.compile_backend)
     model.train()
 
     if args.annotate_attention:
@@ -249,6 +254,9 @@ def main() -> None:
             "dtype": args.dtype,
             "amp": args.amp,
             "annotate_attention": args.annotate_attention,
+            "compile_model": args.compile_model,
+            "compile_mode": args.compile_mode,
+            "compile_backend": args.compile_backend,
             "memory_profile": args.memory_profile,
         },
         "forward_ms": {
