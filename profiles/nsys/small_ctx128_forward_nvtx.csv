@@ -1,0 +1,16 @@
+
+NOTICE: Existing SQLite export found: profiles/nsys/small_ctx128_forward.sqlite
+        It is assumed file was previously exported from: profiles/nsys/small_ctx128_forward.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [profiles/nsys/small_ctx128_forward.sqlite] with [/cm/shared/apps/cuda12.6/toolkit/12.6/nsight-systems-2024.4.2/host-linux-x64/reports/nvtx_sum.py]... 
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Style,Range
+44.0,1120871426,15,74724761.7,45163200.0,44830632,475844966,110982702.6,PushPop,:forward
+25.9,658332748,5,131666549.6,45600166.0,45417578,476172227,192584545.4,PushPop,:warmup_step
+18.5,470127286,10,47012728.6,45717710.5,45147337,52217597,2375397.2,PushPop,:measured_step
+5.8,146586385,180,814368.8,575304.5,561894,39690598,2914565.7,PushPop,:scaled dot product attention
+2.6,66316462,180,368424.8,231117.5,226907,23103684,1704277.2,PushPop,:computing attention scores
+1.9,47560481,180,264224.9,167712.5,162927,15899952,1172324.9,PushPop,:computing softmax
+1.1,27790297,180,154390.5,147027.5,143307,604469,37345.4,PushPop,:final matmul
+0.3,7354642,15,490309.5,476737.0,297541,1044720,166538.2,PushPop,:step_start
+
